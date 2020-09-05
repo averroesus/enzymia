@@ -1,0 +1,59 @@
+html  {
+  height: 100%;
+}
+
+body {
+  background: rgb(231, 222, 254);
+  font-family: sans-serif;
+  height: 100%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* nav {
+  border: 2px solid grey;
+  border-radius: 7px;
+  background: orange;
+  font-size: 2em;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 50%;
+  margin-bottom: 13px;
+
+  display: flex;
+  align-items: stretch;
+
+}
+
+div{
+  border-radius: 5px;
+}
+
+.home {
+  background: rgb(245, 66, 81);
+
+}
+
+.search {
+  background: rgb(98, 189, 115);
+}
+.logout {
+  background: rgb(245, 66, 81);
+} */

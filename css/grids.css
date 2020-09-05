@@ -1,0 +1,46 @@
+.page {
+  font-family: sans-serif;
+  display: grid;
+  grid-template: auto 100% / repeat(4, auto);
+}
+
+body {
+  margin: 0;
+  color: #0A100D;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+}
+
+label {
+  margin-bottom: 2px;
+  font-size: 1.5em;
+  padding: 7px;
+  display: block;
+  border-radius: 3px;
+  transition-property: background;
+  transition-duration: 0.5s
+}
+
+label:hover {
+  background: #D6D5C9;
+  cursor: pointer;
+}
+
+
+
+.page-header {
+  background-color: rgb(205, 205, 205);
+  grid-column: 1 / -1;
+  border-bottom: 5px solid #A22C29;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.page-content {
+  background-color: rgb(255, 255, 255);
+  grid-column: 1 / -1;
+}
