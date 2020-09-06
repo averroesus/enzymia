@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+  color: #020402;
+}
+
+header {
+  background-color: #d6d5c9;
+  border-bottom: 3px solid #a22c29;
+}
+
+
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+  text-align: center;
+}
