@@ -1,5 +1,6 @@
 const form = document.querySelector('form');
 const checkBtn = document.querySelector('button[type=submit]');
+const restartBtn = document.querySelector('button.restart-quiz');
 const resultBox = document.querySelector('.result');
 
 console.log(resultBox);
@@ -13,6 +14,9 @@ reqQuiz.onload = function () {
   const quizContent = JSON.parse(reqQuiz.responseText);
   // console.log(quizContent);
 
+  //DISABLE QUIZ RESTARTING BUTTON
+  restartBtn.disabled = true;
+
   let outputQ = '';
 
   //CREATE QUIZBOX WITH ANSWERS INSIDE IT
@@ -20,7 +24,7 @@ reqQuiz.onload = function () {
     // console.log(questions.answers);
 
     outputQ += `<div class="question-box">
-    <p> ${questions.questionName} </p>
+    <h6> ${questions.questionName} </h6>
     `;
 
     //GET ANSWERS IDs
@@ -29,6 +33,7 @@ reqQuiz.onload = function () {
       outputA += `<label> <div class='single-choice-box'>
                   <input type='radio' name='${qNumber + 1}' value='${letter}' id='${letter}'>
                   ${questions.answers[letter]}
+                  <span class="input-box"> </span>
                   </div> </label>`;
     }
 
@@ -48,7 +53,7 @@ reqQuiz.onload = function () {
     let selectedAnswers = document.querySelectorAll('input[type=radio]:checked');
 
     //CHECK IF ALL QUESTIONS ARE ANSWERED
-    if ((availableAnswers.length === selectedAnswers.length)) {
+    if ((availableAnswers.length !== selectedAnswers.length)) {
       window.alert('Пожалуйста, ответьте на все вопросы');
     } else {
 
@@ -60,13 +65,14 @@ reqQuiz.onload = function () {
           countFalse += 1;
         };
 
+        //SHOW FINAL RESULT --- CORRECT AND INCORRECT ANSWERS INCLUDED
+        let output = `Ваш результат ${countTrue} из ${availableAnswers.length}.`;
+        resultBox.innerHTML = output;
+
+        document.querySelectorAll('div.questin-box').disabled = true;
       }
 
     }
-
-    //SHOW FINAL RESULT --- CORRECT AND INCORRECT ANSWERS INCLUDED
-    let output = `Ваш результат ${countTrue} из ${availableAnswers.length}.`;
-    resultBox.innerHTML = output;
 
   });
 
