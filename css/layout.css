@@ -26,3 +26,9 @@ div.quiz-buttons-cont {
   display: flex;
   flex-flow: row wrap;
 }
+
+/* @media (width: 900px) {
+  main {
+    padding: 5px;
+  }
+} */

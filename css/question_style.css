@@ -1,14 +1,15 @@
+/* QUESTIONBOX STYLING */
+
 div.question-box {
-  /* border: 1px dashed black;s */
-  padding: 9px 3px 3px 3px;
-  min-width: 100px;
+  /* border: 1px dashed black;*/
+  /* padding: 9px 3px 3px 3px; */
   width: 70vw;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 2px;
   transition: background-color 0.5s;
   background-color: #fcfcfc;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 h6 {
@@ -53,6 +54,7 @@ input[type='radio'] {
 
 span.input-box {
   display: inline-block;
+  white-space: nowrap;
   /* -webkit-box-sizing: border-box;
   box-sizing: border-box; */
   float: left;
@@ -85,6 +87,8 @@ input[type=radio]:checked ~ span.input-box:after {
   transform: translate(-50%, -50%) scale(1);
 }
 
+
+
 /* CHECK&RESTART BUTTON STYLING */
 div > button.submit-quiz, button.restart-quiz {
   box-sizing: border-box;
@@ -109,4 +113,27 @@ div > button.restart-quiz:disabled {
 
 div > button.submit-quiz:hover, button.restart-quiz:hover {
   background-color: #ededed;
+}
+
+
+/* MEDIA QUIERIES */
+
+@media (max-width: 900px) {
+  form {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  div.question-box {
+    width: 100%;
+    background-color: #ededed;
+    /* border: 1px dashed lime; */
+  }
+
+  div.quiz-buttons-cont {
+    flex-flow: column wrap;
+    margin: 5px 0 0 0;
+    width: 100%;
+  }
 }
