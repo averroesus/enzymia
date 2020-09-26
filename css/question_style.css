@@ -1,22 +1,31 @@
+/* QUESTTION FORM STYLING */
+
+form {
+  margin: 0;
+}
+
+
+
 /* QUESTIONBOX STYLING */
 
 div.question-box {
+
   /* border: 1px dashed black;*/
-  /* padding: 9px 3px 3px 3px; */
+  padding: 9px 3px 3px 3px;
   width: 70vw;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 10px;
   border-radius: 2px;
   transition: background-color 0.5s;
   background-color: #fcfcfc;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 h6 {
   font-size: 1.05em;
-  font-weight: 500;
+  font-weight: bold;
   margin-top: 2px;
-  margin-bottom: 0px;
+  margin-bottom: 7px;
   margin-left: 2px;
   padding-left: 14px;
 
@@ -27,9 +36,21 @@ div.question-box:hover {
   background-color: #ededed;
 }
 
+
+
+/* QUESTTION-CHOICE STYLING */
+label {
+  display: block;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
 div.single-choice-box {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   transition: all 0.5s;
-  margin: 7px;
+  margin: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 2px;
@@ -43,44 +64,44 @@ label:hover {
   cursor: pointer;
 }
 
+p {
+  margin: 0;
+}
+
 
 /* RADIO BUTTON STYLING */
 
 input[type='radio'] {
-  position: relative;
-  float: right;
+  align-items: center;
+  border: 2px solid lime;
   display: none;
 }
 
 span.input-box {
-  display: inline-block;
-  white-space: nowrap;
-  /* -webkit-box-sizing: border-box;
-  box-sizing: border-box; */
-  float: left;
-  border: 3px solid #004e98;
   position: relative;
-  vertical-align: middle;
-  width: 12px;
-  height: 12px;
+  border: 2px solid #6D9DC5;
+  width: 13px;
+  height: 13px;
   margin-left: 8px;
-  margin-right: 5px;
-  border-radius: 5px;
+  margin-right: 8px;
+  border-radius: 2px;
   transition: transform 0.02s;
+  box-sizing: border-box;
 }
 
 span.input-box:after {
   content: "";
   display: inline-block;
   position: absolute;
-  left: 50%;
   top: 50%;
-  width: 70%;
-  height: 70%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.1s;
   background-color: #004e98;
-  border-radius: 3px;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 input[type=radio]:checked ~ span.input-box:after {
@@ -88,22 +109,39 @@ input[type=radio]:checked ~ span.input-box:after {
 }
 
 
+/* SETTING ORDER OF FLEX (SINGLE-CHOICE-BOX) ELEMENTS */
+div.single-choice-box :nth-child(1) {
+  order: 2;
+}
+
+div.single-choice-box :nth-child(2) {
+  order: 3;
+  flex: 3;
+}
+
+div.single-choice-box :nth-child(3) {
+  order: 1;
+}
+
+
 
 /* CHECK&RESTART BUTTON STYLING */
-div > button.submit-quiz, button.restart-quiz {
+
+div > button.submit-quiz, div > button.restart-quiz {
   box-sizing: border-box;
   border: none;
   border-radius: 3px;
   background-color: #fcfcfc;
   font-size: 1.2em;
   font-weight: 900;
-  width: 34vw;
-  padding: 10px;
+  padding: 13px;
+  margin-bottom: 7px;
   transition: background-color 0.3s;
+  flex-grow: 1;
 }
 
 div > button.restart-quiz {
-  margin-right: 1.5vh;
+  margin-right: 13px;
 }
 
 div > button.restart-quiz:disabled {
@@ -116,12 +154,13 @@ div > button.submit-quiz:hover, button.restart-quiz:hover {
 }
 
 
+
 /* MEDIA QUIERIES */
 
-@media (max-width: 900px) {
+ @media (max-width: 900px) {
   form {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0px;
     box-sizing: border-box;
   }
 
@@ -132,8 +171,15 @@ div > button.submit-quiz:hover, button.restart-quiz:hover {
   }
 
   div.quiz-buttons-cont {
-    flex-flow: column wrap;
-    margin: 5px 0 0 0;
+    flex-flow: column nowrap;
+    box-sizing: border-box;
     width: 100%;
+    /* border: 1px dashed lime; */
+  }
+
+  div > button.restart-quiz {
+    margin-right: 0px;
+    margin-bottom: 10px;
+
   }
 }

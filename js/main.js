@@ -30,11 +30,14 @@ reqQuiz.onload = function () {
     //GET ANSWERS IDs
     let outputA = '';
     for (letter in questions.answers) {
-      outputA += `<label> <div class='single-choice-box'>
-                  <input type='radio' name='${qNumber + 1}' value='${letter}' id='${letter}'>
-                  ${questions.answers[letter]}
-                  <span class="input-box"> </span>
-                  </div> </label>`;
+      outputA += `<label>
+                    <div class='single-choice-box'>
+                      <input type='radio' name='${qNumber + 1}' value='${letter}' id='${letter}'>
+                        <p> ${questions.answers[letter]} </p>
+                      <span class="input-box"> </span>
+                    </div>
+                  </label>
+                  `;
     }
 
     outputQ += `<div class='choices-box'> ${outputA} </div>`;
