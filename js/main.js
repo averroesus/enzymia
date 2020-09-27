@@ -72,7 +72,8 @@ reqQuiz.onload = function () {
         let output = `Ваш результат ${countTrue} из ${availableAnswers.length}.`;
         resultBox.innerHTML = output;
 
-        document.querySelectorAll('div.questin-box').disabled = true;
+        restartBtn.disabled = false;
+        checkBtn.disabled = true;
       }
 
     }

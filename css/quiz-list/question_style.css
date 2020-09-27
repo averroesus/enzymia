@@ -26,8 +26,9 @@ h6 {
   font-weight: bold;
   margin-top: 2px;
   margin-bottom: 7px;
-  margin-left: 2px;
-  padding-left: 14px;
+  margin-left: 10px;
+  padding-left: 7px;
+  border-left: 2px solid #a22c29;
 
 }
 
@@ -138,6 +139,7 @@ div > button.submit-quiz, div > button.restart-quiz {
   margin-bottom: 7px;
   transition: background-color 0.3s;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 div > button.restart-quiz {
@@ -146,8 +148,13 @@ div > button.restart-quiz {
 
 div > button.restart-quiz:disabled {
   background-color: #fcfcfc;
+  cursor: not-allowed;
 }
 
+div > button.submit-quiz:disabled:hover {
+  background-color: #fcfcfc;
+  cursor: not-allowed;
+}
 
 div > button.submit-quiz:hover, button.restart-quiz:hover {
   background-color: #ededed;

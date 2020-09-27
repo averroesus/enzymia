@@ -24,12 +24,9 @@ main {
   padding: 11px;
 }
 
-footer {
-  display: flex;
-  flex-flow: row wrap;
-  border: 2px dashed grey;
-  margin: 11px;
-}
+
+/* FOOTER STYLED SEPARATELY */
+
 
 div.quiz-buttons-cont {
   display: flex;

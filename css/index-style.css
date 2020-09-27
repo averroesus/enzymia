@@ -1,0 +1,55 @@
+/* PAGE LAYOUT (AND SIMPLE) STYLING */
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  min-width: 320px;
+  margin: 0;
+  grid-template: repeat(3, 1fr 50vh 0.5fr) / auto;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /* border: 1px dashed red; */
+  border-bottom: 4px solid #a22c29;
+  background-color: #d6d5c9;
+}
+
+main {
+  /* border: 1px dashed red; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  /* height: 50vh; */
+}
+
+
+/* FOOTER STYLED SEPARATELY */
+
+
+/* QUIZ LINKS DECORATIONS */
+
+nav.quiz-list {
+  display: flex;
+}
+
+a {
+  display: block;
+  background-color: #fcfcfc;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #020402;
+  padding: 11px;
+  transition: background-color 1s;
+}
+
+a:hover {
+  background-color: #ededed;
+}
