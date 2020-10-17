@@ -32,7 +32,9 @@ reqQuiz.onload = function () {
     for (letter in questions.answers) {
       outputA += `<label>
                     <div class='single-choice-box'>
-                      <input type='radio' name='${qNumber + 1}' value='${letter}' id='${letter}'>
+                      <input type='radio' name='${
+                        qNumber + 1
+                      }' value='${letter}' id='${letter}'>
                         <p> ${questions.answers[letter]} </p>
                       <span class="input-box"> </span>
                     </div>
@@ -53,20 +55,21 @@ reqQuiz.onload = function () {
     countFalse = 0;
 
     let availableAnswers = document.querySelectorAll('div.question-box');
-    let selectedAnswers = document.querySelectorAll('input[type=radio]:checked');
+    let selectedAnswers = document.querySelectorAll(
+      'input[type=radio]:checked'
+    );
 
     //CHECK IF ALL QUESTIONS ARE ANSWERED
-    if ((availableAnswers.length !== selectedAnswers.length)) {
+    if (availableAnswers.length !== selectedAnswers.length) {
       window.alert('Пожалуйста, ответьте на все вопросы');
     } else {
-
       //LOOP THROUGH THIS CHOICES
       for (let i = 0; i < selectedAnswers.length; i++) {
-        if ((selectedAnswers[i].value === quizContent[i].correct)) {
+        if (selectedAnswers[i].value === quizContent[i].correct) {
           countTrue += 1;
         } else {
           countFalse += 1;
-        };
+        }
 
         //SHOW FINAL RESULT --- CORRECT AND INCORRECT ANSWERS INCLUDED
         let output = `Ваш результат ${countTrue} из ${availableAnswers.length}.`;
@@ -75,11 +78,8 @@ reqQuiz.onload = function () {
         restartBtn.disabled = false;
         checkBtn.disabled = true;
       }
-
     }
-
   });
-
 };
 
 reqQuiz.send();

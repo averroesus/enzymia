@@ -1,0 +1,11 @@
+footer {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /* border: 1px dashed red; */
+  border-top: 3px solid #a22c29;
+}
+
+
+/*# sourceMappingURL=/footer-style.6dd301be.css.map */

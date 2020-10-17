@@ -1,13 +1,13 @@
 body {
-
   color: #020402;
 }
 
 header {
   background-color: #d6d5c9;
   border-bottom: 4px solid #a22c29;
+  font-family: sans-serif;
+  font-weight: 900;
 }
-
 
 h2 {
   font-size: 1.4em;
@@ -26,6 +26,6 @@ header > button.svg-quiz-material {
 
 @media (max-width: 900px) {
   header {
-    width: 100vw;
+    width: 100%;
   }
 }

@@ -4,12 +4,9 @@ form {
   margin: 0;
 }
 
-
-
 /* QUESTIONBOX STYLING */
 
 div.question-box {
-
   /* border: 1px dashed black;*/
   padding: 9px 3px 3px 3px;
   width: 70vw;
@@ -29,15 +26,12 @@ h6 {
   margin-left: 10px;
   padding-left: 7px;
   border-left: 2px solid #a22c29;
-
 }
 
 div.question-box:hover {
   /* transition: all 0.5s; */
   background-color: #ededed;
 }
-
-
 
 /* QUESTTION-CHOICE STYLING */
 label {
@@ -69,10 +63,9 @@ p {
   margin: 0;
 }
 
-
 /* RADIO BUTTON STYLING */
 
-input[type='radio'] {
+input[type="radio"] {
   align-items: center;
   border: 2px solid lime;
   display: none;
@@ -80,7 +73,7 @@ input[type='radio'] {
 
 span.input-box {
   position: relative;
-  border: 2px solid #6D9DC5;
+  border: 2px solid #6d9dc5;
   width: 13px;
   height: 13px;
   margin-left: 8px;
@@ -105,10 +98,9 @@ span.input-box:after {
   box-sizing: border-box;
 }
 
-input[type=radio]:checked ~ span.input-box:after {
+input[type="radio"]:checked ~ span.input-box:after {
   transform: translate(-50%, -50%) scale(1);
 }
-
 
 /* SETTING ORDER OF FLEX (SINGLE-CHOICE-BOX) ELEMENTS */
 div.single-choice-box :nth-child(1) {
@@ -124,11 +116,10 @@ div.single-choice-box :nth-child(3) {
   order: 1;
 }
 
+/* CHECK&RESTART BUTTON STYLING w/ RESULTBOX*/
 
-
-/* CHECK&RESTART BUTTON STYLING */
-
-div > button.submit-quiz, div > button.restart-quiz {
+div > button.submit-quiz,
+div > button.restart-quiz {
   box-sizing: border-box;
   border: none;
   border-radius: 3px;
@@ -136,10 +127,11 @@ div > button.submit-quiz, div > button.restart-quiz {
   font-size: 1.2em;
   font-weight: 900;
   padding: 13px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   transition: background-color 0.3s;
   flex-grow: 1;
   cursor: pointer;
+  outline: none;
 }
 
 div > button.restart-quiz {
@@ -156,15 +148,29 @@ div > button.submit-quiz:disabled:hover {
   cursor: not-allowed;
 }
 
-div > button.submit-quiz:hover, button.restart-quiz:hover {
+div > button.submit-quiz:hover,
+button.restart-quiz:hover {
   background-color: #ededed;
 }
 
+/* STYLING RESULT BOX BUTTON */
 
+div.result {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+  background-color: #fcfcfc;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 13px;
+  width: 70vw;
+  margin-bottom: 10px;
+  text-align: center;
+}
 
 /* MEDIA QUIERIES */
 
- @media (max-width: 900px) {
+@media (max-width: 900px) {
   form {
     width: 100%;
     padding: 0 0px;
@@ -187,6 +193,9 @@ div > button.submit-quiz:hover, button.restart-quiz:hover {
   div > button.restart-quiz {
     margin-right: 0px;
     margin-bottom: 10px;
+  }
 
+  div.result {
+    width: 100%;
   }
 }
