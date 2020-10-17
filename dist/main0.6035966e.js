@@ -173,18 +173,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // LOAD QUIZ FROM .JSON FILE USING PARCEL
 //  GET HTML ELEMENTS
-var main = document.querySelector('main');
-var form = document.querySelector('form');
-var checkBtn = document.querySelector('button[type=submit]');
-var restartBtn = document.querySelector('button.restart-quiz'); //DISABLE QUIZ RESTARTING BUTTON
+var main = document.querySelector("main");
+var form = document.querySelector("form");
+var checkBtn = document.querySelector("button[type=submit]");
+var restartBtn = document.querySelector("button.restart-quiz"); //DISABLE QUIZ RESTARTING BUTTON
 
 restartBtn.disabled = true;
-var outputQ = ''; //CREATE QUIZBOX WITH ANSWERS INSIDE IT
+var outputQ = ""; //CREATE QUIZBOX WITH ANSWERS INSIDE IT
 
 _iodine.default.forEach(function (questions, qNumber) {
   outputQ += "<div class=\"question-box\">\n  <h6> ".concat(questions.questionName, " </h6>\n  "); //GET ANSWERS IDs
 
-  var outputA = '';
+  var outputA = "";
 
   for (var letter in questions.answers) {
     outputA += "<label>\n                  <div class='single-choice-box'>\n                    <input type='radio' name='".concat(qNumber + 1, "' value='").concat(letter, "' id='").concat(letter, "'>\n                      <p> ").concat(questions.answers[letter], " </p>\n                    <span class=\"input-box\"> </span>\n                  </div>\n                </label>\n                ");
@@ -196,28 +196,28 @@ _iodine.default.forEach(function (questions, qNumber) {
 }); //COUNT THE AMOUNT OF CORRECT ANSWERS
 
 
-checkBtn.addEventListener('click', function (e) {
+checkBtn.addEventListener("click", function (e) {
   e.preventDefault();
   var countTrue = 0;
   var countFalse = 0;
-  var availableAnswers = document.querySelectorAll('div.question-box');
-  var selectedAnswers = document.querySelectorAll('input[type=radio]:checked'); //CREATE RESULTBOX CONTAINER
-
-  var resultBox = document.createElement('div');
-  resultBox.className = 'result';
-  main.appendChild(resultBox); //CHECK IF ALL QUESTIONS ARE ANSWERED
+  var availableAnswers = document.querySelectorAll("div.question-box");
+  var selectedAnswers = document.querySelectorAll("input[type=radio]:checked"); //CHECK IF ALL QUESTIONS ARE ANSWERED
 
   if (availableAnswers.length !== selectedAnswers.length) {
-    window.alert('Пожалуйста, ответьте на все вопросы');
+    window.alert("Пожалуйста, ответьте на все вопросы");
   } else {
-    //LOOP THROUGH THIS CHOICES
+    //CREATE RESULTBOX CONTAINER
+    var resultBox = document.createElement("div");
+    resultBox.className = "result";
+    main.appendChild(resultBox); //LOOP THROUGH THIS CHOICES
+
     for (var i = 0; i < selectedAnswers.length; i++) {
       if (selectedAnswers[i].value === _iodine.default[i].correct) {
         countTrue += 1;
-        availableAnswers[i].style.borderLeft = '3px solid #136F63';
+        availableAnswers[i].style.borderLeft = "3px solid #136F63";
       } else {
         countFalse += 1;
-        availableAnswers[i].style.borderLeft = '3px solid #A22C29';
+        availableAnswers[i].style.borderLeft = "3px solid #A22C29";
       } //SHOW FINAL RESULT --- CORRECT AND INCORRECT ANSWERS INCLUDED
 
 
@@ -229,23 +229,23 @@ checkBtn.addEventListener('click', function (e) {
   }
 }); // RESTARTING THE QUIZ
 
-restartBtn.addEventListener('click', function (e) {
+restartBtn.addEventListener("click", function (e) {
   //REMOVE RESULT CONTAINER
-  var resultBox = document.querySelector('.result');
+  var resultBox = document.querySelector(".result");
   resultBox.remove(); // MAKING CHECK BUTTON AVAILABLE
 
   checkBtn.disabled = false; // RESESTING RESULTING
 
-  var choicesRadio = document.querySelectorAll('input[type=radio]');
+  var choicesRadio = document.querySelectorAll("input[type=radio]");
   choicesRadio.forEach(function (input, index) {
     input.checked = false;
   }); //DISABLE RESULT BUTTON
 
   restartBtn.disabled = true; //REMOVING WRONG/CORRECT LEFT BORDER OF QUESTION-BOXES
 
-  var availableAnswers = document.querySelectorAll('div.question-box');
+  var availableAnswers = document.querySelectorAll("div.question-box");
   availableAnswers.forEach(function (question, index) {
-    question.style.borderLeft = '0px ';
+    question.style.borderLeft = "0px ";
   });
 });
 },{"../quizes(json)/iodine.json":"../quizes(json)/iodine.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -276,7 +276,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63309" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62033" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

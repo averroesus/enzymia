@@ -1,0 +1,29 @@
+{
+  "name": "medtests",
+  "version": "1.0.0",
+  "description": "Университетска программа медицинских курсов с тестами",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx parcel html/index1.html",
+    "build": "npx parcel html/build index1.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edition13th/medtests.git"
+  },
+  "keywords": [
+    "medicine",
+    "tests",
+    "medtests"
+  ],
+  "author": "editor.13th",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edition13th/medtests/issues"
+  },
+  "homepage": "https://github.com/edition13th/medtests#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

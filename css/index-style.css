@@ -30,14 +30,14 @@ main {
   /* height: 50vh; */
 }
 
-
 /* FOOTER STYLED SEPARATELY */
-
 
 /* QUIZ LINKS DECORATIONS */
 
 nav.quiz-list {
   display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 a {
@@ -47,6 +47,7 @@ a {
   text-decoration: none;
   color: #020402;
   padding: 11px;
+  margin-bottom: 10px;
   transition: background-color 1s;
 }
 

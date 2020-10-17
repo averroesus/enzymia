@@ -74,8 +74,8 @@ input[type="radio"] {
 span.input-box {
   position: relative;
   border: 2px solid #6d9dc5;
-  width: 13px;
-  height: 13px;
+  width: 12px;
+  height: 12px;
   margin-left: 8px;
   margin-right: 8px;
   border-radius: 2px;
