@@ -117,138 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../quizes(json)/iodine.json":[function(require,module,exports) {
-module.exports = [{
-  "questionName": "Структура, захватывающая йод и транспортирующая её в коллоидную систему для синтеза гормонов?",
-  "answers": {
-    "a1": "тиреоидная пероксидаза",
-    "b1": "найтрий-йиодный симпортер",
-    "c1": "натрий-калиевый насос",
-    "d1": "фагоцит"
-  },
-  "correct": "b1"
-}, {
-  "questionName": "Формирование монойодтирозин (Т1) и дийодтирозина (Т2) происходит путём",
-  "answers": {
-    "a2": "йодирования тиреоглобулиновых (Тг) гомидимеров",
-    "b2": "катализации тиреоидной пероксидазой (ТПО) слияния молекул Т2 и Т1",
-    "c2": "пиноцитоза сохранившегося коллоида",
-    "d2": "дейоидорвания Т2 и Т1 дегалогеназой"
-  },
-  "correct": "a2"
-}, {
-  "questionName": "Фермент, который обеспечивает синтез монойодтирозина и дийодтирозина в Т3 и Т4?",
-  "answers": {
-    "a3": "двойная оксидаза",
-    "b3": "фосфолипаза",
-    "c3": "дегалогеназа",
-    "d3": "тиреоидная пероксидаза"
-  },
-  "correct": "d3"
-}, {
-  "questionName": "Достижение функциональной дифференцировки тиреоидных фолликулярный клеток, а затем и начало процесса гомогенеза осущевствляется",
-  "answers": {
-    "a4": "пиноцитозом коллоидной системы",
-    "b4": "наличием транскрипционных факторов",
-    "c4": "формированием водородного пероксида",
-    "d4": "окислением йода тиреоидной пероксидазой "
-  },
-  "correct": "b4"
-}, {
-  "questionName": "Какое минимальное количество йода необходимо потреблять взрослому человеку, чтобы устранить симптомы недостаточности йода?",
-  "answers": {
-    "a5": "40 - 60 мг",
-    "b5": "100 мг",
-    "c5": "250 мг",
-    "d5": "400 мг"
-  },
-  "correct": "b5"
-}];
-},{}],"../js/main0.js":[function(require,module,exports) {
-"use strict";
+})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-var _iodine = _interopRequireDefault(require("../quizes(json)/iodine.json"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// LOAD QUIZ FROM .JSON FILE USING PARCEL
-//  GET HTML ELEMENTS
-var main = document.querySelector("main");
-var form = document.querySelector("form");
-var checkBtn = document.querySelector("button[type=submit]");
-var restartBtn = document.querySelector("button.restart-quiz"); //DISABLE QUIZ RESTARTING BUTTON
-
-restartBtn.disabled = true;
-var outputQ = ""; //CREATE QUIZBOX WITH ANSWERS INSIDE IT
-
-_iodine.default.forEach(function (questions, qNumber) {
-  outputQ += "<div class=\"question-box\">\n  <h6> ".concat(questions.questionName, " </h6>\n  "); //GET ANSWERS IDs
-
-  var outputA = "";
-
-  for (var letter in questions.answers) {
-    outputA += "<label>\n                  <div class='single-choice-box'>\n                    <input type='radio' name='".concat(qNumber + 1, "' value='").concat(letter, "' id='").concat(letter, "'>\n                      <p> ").concat(questions.answers[letter], " </p>\n                    <span class=\"input-box\"> </span>\n                  </div>\n                </label>\n                ");
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
 
-  outputQ += "<div class='choices-box'> ".concat(outputA, " </div>");
-  outputQ += "</div>";
-  form.innerHTML = outputQ;
-}); //COUNT THE AMOUNT OF CORRECT ANSWERS
+  return bundleURL;
+}
 
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-checkBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  var countTrue = 0;
-  var countFalse = 0;
-  var availableAnswers = document.querySelectorAll("div.question-box");
-  var selectedAnswers = document.querySelectorAll("input[type=radio]:checked"); //CHECK IF ALL QUESTIONS ARE ANSWERED
-
-  if (availableAnswers.length !== selectedAnswers.length) {
-    window.alert("Пожалуйста, ответьте на все вопросы");
-  } else {
-    //CREATE RESULTBOX CONTAINER
-    var resultBox = document.createElement("div");
-    resultBox.className = "result";
-    main.appendChild(resultBox); //LOOP THROUGH THIS CHOICES
-
-    for (var i = 0; i < selectedAnswers.length; i++) {
-      if (selectedAnswers[i].value === _iodine.default[i].correct) {
-        countTrue += 1;
-        availableAnswers[i].style.borderLeft = "3px solid #136F63";
-      } else {
-        countFalse += 1;
-        availableAnswers[i].style.borderLeft = "3px solid #A22C29";
-      } //SHOW FINAL RESULT --- CORRECT AND INCORRECT ANSWERS INCLUDED
-
-
-      var output = "\u0412\u0430\u0448 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 ".concat(countTrue, " \u0438\u0437 ").concat(availableAnswers.length, ".");
-      resultBox.innerHTML = output;
-      restartBtn.disabled = false;
-      checkBtn.disabled = true;
+    if (matches) {
+      return getBaseURL(matches[0]);
     }
   }
-}); // RESTARTING THE QUIZ
 
-restartBtn.addEventListener("click", function (e) {
-  //REMOVE RESULT CONTAINER
-  var resultBox = document.querySelector(".result");
-  resultBox.remove(); // MAKING CHECK BUTTON AVAILABLE
+  return '/';
+}
 
-  checkBtn.disabled = false; // RESESTING RESULTING
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
 
-  var choicesRadio = document.querySelectorAll("input[type=radio]");
-  choicesRadio.forEach(function (input, index) {
-    input.checked = false;
-  }); //DISABLE RESULT BUTTON
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
 
-  restartBtn.disabled = true; //REMOVING WRONG/CORRECT LEFT BORDER OF QUESTION-BOXES
+function updateLink(link) {
+  var newLink = link.cloneNode();
 
-  var availableAnswers = document.querySelectorAll("div.question-box");
-  availableAnswers.forEach(function (question, index) {
-    question.style.borderLeft = "0px ";
-  });
-});
-},{"../quizes(json)/iodine.json":"../quizes(json)/iodine.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -452,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/main0.js"], null)
-//# sourceMappingURL=/main0.6035966e.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/lessons(html)/carbs-intro.js.map
