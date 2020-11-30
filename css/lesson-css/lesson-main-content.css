@@ -1,0 +1,109 @@
+main {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main div.image-container {
+    text-align: center;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #ededed;
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+}
+
+/* STYLING PARAGRAPH */
+
+p {
+    text-indent: 0.5cm;
+    text-align: justify;
+    margin: 16px auto 2px auto;
+}
+
+
+/* FORMATTING LITTLE NOTE FIELD */
+
+div.note {
+    display: flex;
+    flex-flow: row;
+    border: 0px solid #dbdbdb;
+    border-radius: 6px;
+    background-color: #dbdbdb;
+    margin: 16px auto 0 auto;
+}
+
+div.content {
+    padding: 6px;
+    align-self: center;
+}
+
+#remember {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0 6px 6px;
+}
+
+ul {
+    margin: 0px 5px;
+}
+
+li {
+    margin-bottom: 2px;
+}
+
+/* FORMATTING LITTLE INFO BUTTON */
+
+#info {
+    color: #004e98;
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    background: #dbdbdb;
+    margin-left: 8px;
+    margin-bottom: 2px;
+    padding: 2px;
+    transition: background 0.5s;
+    vertical-align: middle;
+}
+
+#info:hover {
+    background: lightblue;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 900px) {
+    main div.image-container {
+    width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    main {
+    padding-left: 6px;
+    }
+
+    p {
+    padding-left: 0px;
+    text-indent: 0cm;
+    }
+
+    p + ul {
+    margin-left: 15px;
+    margin-top: 3px;
+    }
+
+    ul {
+    padding-left: 10px;
+    margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    p + ul {
+        margin-left: 20px;
+    }
+}
