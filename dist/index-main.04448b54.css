@@ -1,6 +1,49 @@
+/* QUIZ LINKS DECORATIONS */
 
-a {
-    margin: auto auto auto auto;
+nav.quiz-list {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: left;
+  }
+  
+div.list-item {
+    display: flex;
+    flex: row auto;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 4px;
 }
+
+img.test {
+    display: inline-block;
+    height: 12px;
+    vertical-align: middle;
+   
+}
+
+div.list-item a {
+    display: flex;
+    flex: row auto;
+    align-items: center;
+    height: 16px;
+    padding: 6px;
+    border-radius: 2px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #020402;
+    transition: background-color 0.3s;
+    background-color: #ededed;
+}
+
+div.list-item *:hover  {
+    background-color: #fcfcfc;
+    cursor: pointer;
+}
+
+a img.test {
+    vertical-align: middle;
+}
+
+  
 
 /*# sourceMappingURL=/index-main.04448b54.css.map */

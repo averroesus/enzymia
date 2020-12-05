@@ -1,5 +1,5 @@
 // LOAD QUIZ FROM .JSON FILE USING PARCEL
-import quizContent from "../quizes(json)/iodine.json";
+import quizContent from "../quizes_json/carbs.json";
 
 //  GET HTML ELEMENTS
 const main = document.querySelector("main");

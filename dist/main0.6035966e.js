@@ -117,57 +117,85 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../quizes(json)/iodine.json":[function(require,module,exports) {
+})({"../quizes_json/carbs.json":[function(require,module,exports) {
 module.exports = [{
-  "questionName": "Структура, захватывающая йод и транспортирующая её в коллоидную систему для синтеза гормонов?",
+  "questionName": "Углеводы характеризуются наличием какой-из функциональных групп?",
   "answers": {
-    "a1": "тиреоидная пероксидаза",
-    "b1": "найтрий-йиодный симпортер",
-    "c1": "натрий-калиевый насос",
-    "d1": "фагоцит"
+    "a1": "карбоксильной",
+    "b1": "карбоксильной и аминогруппы",
+    "c1": "гидроксильной",
+    "d1": "карбонильной и гидроксильной",
+    "e1": "карбонильной"
   },
-  "correct": "b1"
+  "correct": "d1"
 }, {
-  "questionName": "Формирование монойодтирозин (Т1) и дийодтирозина (Т2) происходит путём",
+  "questionName": "Молекула сахарозы является ",
   "answers": {
-    "a2": "йодирования тиреоглобулиновых (Тг) гомидимеров",
-    "b2": "катализации тиреоидной пероксидазой (ТПО) слияния молекул Т2 и Т1",
-    "c2": "пиноцитоза сохранившегося коллоида",
-    "d2": "дейоидорвания Т2 и Т1 дегалогеназой"
+    "a2": "полисахаридом",
+    "b2": "дисахаридом",
+    "c2": "олигосахаридом",
+    "d2": "моносахаридом"
   },
-  "correct": "a2"
+  "correct": "b2"
 }, {
-  "questionName": "Фермент, который обеспечивает синтез монойодтирозина и дийодтирозина в Т3 и Т4?",
+  "questionName": "Резервным полисахридом у людей является",
   "answers": {
-    "a3": "двойная оксидаза",
-    "b3": "фосфолипаза",
-    "c3": "дегалогеназа",
-    "d3": "тиреоидная пероксидаза"
+    "a3": "крахмал",
+    "b3": "целлюлоза",
+    "c3": "гликоген",
+    "d3": "хитин"
   },
-  "correct": "d3"
+  "correct": "c3"
 }, {
-  "questionName": "Достижение функциональной дифференцировки тиреоидных фолликулярный клеток, а затем и начало процесса гомогенеза осущевствляется",
+  "questionName": "Какой из нижеперечисленных углеводов метаболизируется внутриклеточно?",
   "answers": {
-    "a4": "пиноцитозом коллоидной системы",
-    "b4": "наличием транскрипционных факторов",
-    "c4": "формированием водородного пероксида",
-    "d4": "окислением йода тиреоидной пероксидазой "
+    "a4": "галактоза",
+    "b4": "сахароза",
+    "c4": "хитин",
+    "d4": "лактоза"
   },
-  "correct": "b4"
+  "correct": "a4"
 }, {
-  "questionName": "Какое минимальное количество йода необходимо потреблять взрослому человеку, чтобы устранить симптомы недостаточности йода?",
+  "questionName": "Трансмембранный транспорт фруктозы осуществляется через?",
   "answers": {
-    "a5": "40 - 60 мг",
-    "b5": "100 мг",
-    "c5": "250 мг",
-    "d5": "400 мг"
+    "a5": "ГЛЮТ-1",
+    "b5": "ГЛЮТ-2",
+    "c5": "ГЛЮТ-4",
+    "d5": "ГЛЮТ-5"
   },
-  "correct": "b5"
+  "correct": "d5"
+}, {
+  "questionName": "При участии какого из ионов осуществляется градиент-зависимый траснпорт глюкозы в клетку?",
+  "answers": {
+    "a5": "Na",
+    "b5": "Mg",
+    "c5": "K",
+    "d5": "Cl"
+  },
+  "correct": "a1"
+}, {
+  "questionName": "Что характерно для ГЛЮТ-4 (глюкозного траснпортера)?",
+  "answers": {
+    "a5": "инсулинозависимость",
+    "b5": "встерчается в толстом кишечнике",
+    "c5": "встречается в тонком кишечнике",
+    "d5": "обеспечивает непрерывный поток глюкозы к тканям"
+  },
+  "correct": "d5"
+}, {
+  "questionName": "Трансмембранный транспорт фруктозы осуществляется через?",
+  "answers": {
+    "a5": "ГЛЮТ-1",
+    "b5": "ГЛЮТ-2",
+    "c5": "ГЛЮТ-4",
+    "d5": "ГЛЮТ-5"
+  },
+  "correct": "d5"
 }];
 },{}],"../js/main0.js":[function(require,module,exports) {
 "use strict";
 
-var _iodine = _interopRequireDefault(require("../quizes(json)/iodine.json"));
+var _carbs = _interopRequireDefault(require("../quizes_json/carbs.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -181,7 +209,7 @@ var restartBtn = document.querySelector("button.restart-quiz"); //DISABLE QUIZ R
 restartBtn.disabled = true;
 var outputQ = ""; //CREATE QUIZBOX WITH ANSWERS INSIDE IT
 
-_iodine.default.forEach(function (questions, qNumber) {
+_carbs.default.forEach(function (questions, qNumber) {
   outputQ += "<div class=\"question-box\">\n  <h6> ".concat(questions.questionName, " </h6>\n  "); //GET ANSWERS IDs
 
   var outputA = "";
@@ -212,7 +240,7 @@ checkBtn.addEventListener("click", function (e) {
     main.appendChild(resultBox); //LOOP THROUGH THIS CHOICES
 
     for (var i = 0; i < selectedAnswers.length; i++) {
-      if (selectedAnswers[i].value === _iodine.default[i].correct) {
+      if (selectedAnswers[i].value === _carbs.default[i].correct) {
         countTrue += 1;
         availableAnswers[i].style.borderLeft = "3px solid #136F63";
       } else {
@@ -248,7 +276,7 @@ restartBtn.addEventListener("click", function (e) {
     question.style.borderLeft = "0px ";
   });
 });
-},{"../quizes(json)/iodine.json":"../quizes(json)/iodine.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../quizes_json/carbs.json":"../quizes_json/carbs.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -276,7 +304,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62026" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58911" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
