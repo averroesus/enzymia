@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx parcel html/index1.html",
-    "build": "npx parcel html/build index1.html"
+    "build": "npx parcel build html/index1.html"
   },
   "repository": {
     "type": "git",
