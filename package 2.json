@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx parcel html/index1.html",
-    "build": "npx parcel html/build index1.html"
+    "dev": "npx parcel html/index.html",
+    "build": "npx parcel html/build index.html"
   },
   "repository": {
     "type": "git",
