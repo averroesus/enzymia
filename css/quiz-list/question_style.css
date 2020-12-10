@@ -123,7 +123,7 @@ div > button.restart-quiz {
   box-sizing: border-box;
   border: none;
   border-radius: 3px;
-  background-color: #fcfcfc;
+  background-color: #EDEDED;
   font-size: 1.2em;
   font-weight: 900;
   padding: 13px;
@@ -150,7 +150,7 @@ div > button.submit-quiz:disabled:hover {
 
 div > button.submit-quiz:hover,
 button.restart-quiz:hover {
-  background-color: #ededed;
+  background-color: #FCFCFC;
 }
 
 /* STYLING RESULT BOX BUTTON */

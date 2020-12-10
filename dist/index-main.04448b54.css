@@ -44,6 +44,17 @@ a img.test {
     vertical-align: middle;
 }
 
+/* STYLING NOT-READY <A> LIST ITEMS  */
+
+div.list-item a.not-ready {
+    cursor: not-allowed;
+    transition: background-color 0.3s;
+}
+
+div.list-item a.not-ready:hover {
+    background-color: #E38D8C;
+}
+
   
 
 /*# sourceMappingURL=/index-main.04448b54.css.map */

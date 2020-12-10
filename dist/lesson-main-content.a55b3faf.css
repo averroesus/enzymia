@@ -19,6 +19,8 @@ p {
     text-indent: 0.5cm;
     text-align: justify;
     margin: 16px auto 2px auto;
+    /* padding-left: 4px; */
+    /* border-left: 2px solid #a22c29; */
 }
 
 
@@ -29,7 +31,7 @@ div.note {
     flex-flow: row;
     border: 0px solid #dbdbdb;
     border-radius: 6px;
-    background-color: #dbdbdb;
+    background-color: #ededed;
     margin: 16px auto 0 auto;
 }
 

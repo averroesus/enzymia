@@ -20,17 +20,26 @@ header {
   /* border: 1px dashed red; */
   border-bottom: 4px solid #a22c29;
   background-color: #EDEDE8;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+header > div {
+  font-family: serif;
+  font-weight: 500;
+  font-size: 2em;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 main {
   /* grid-column: 3 / -1; */
   /* border: 1px dashed red; */
   font-family: "Open Sans", sans-serif;
-  display: grid;
+  display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   /* height: 50vh; */
 }
 
