@@ -21,8 +21,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 11px;
-  padding-bottom: 0;
+
+  margin: 0;
+  padding: 6px;
 }
 
 /* FOOTER STYLED SEPARATELY */

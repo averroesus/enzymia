@@ -117,79 +117,209 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"../quizes_json/carbs.json":[function(require,module,exports) {
+module.exports = [{
+  "questionName": "Углеводы характеризуются наличием какой-из функциональных групп?",
+  "answers": {
+    "a1": "карбоксильной",
+    "b1": "карбоксильной и аминогруппы",
+    "c1": "гидроксильной",
+    "d1": "карбонильной и гидроксильной",
+    "e1": "карбонильной"
+  },
+  "correct": "d1"
+}, {
+  "questionName": "Молекула сахарозы является ",
+  "answers": {
+    "a2": "полисахаридом",
+    "b2": "дисахаридом",
+    "c2": "олигосахаридом",
+    "d2": "моносахаридом"
+  },
+  "correct": "b2"
+}, {
+  "questionName": "Резервным полисахридом у людей является",
+  "answers": {
+    "a3": "крахмал",
+    "b3": "целлюлоза",
+    "c3": "гликоген",
+    "d3": "хитин"
+  },
+  "correct": "c3"
+}, {
+  "questionName": "Какой из нижеперечисленных углеводов метаболизируется внутриклеточно?",
+  "answers": {
+    "a4": "галактоза",
+    "b4": "сахароза",
+    "c4": "хитин",
+    "d4": "лактоза"
+  },
+  "correct": "a4"
+}, {
+  "questionName": "Трансмембранный транспорт фруктозы осуществляется через?",
+  "answers": {
+    "a5": "ГЛЮТ-1",
+    "b5": "ГЛЮТ-2",
+    "c5": "ГЛЮТ-4",
+    "d5": "ГЛЮТ-5"
+  },
+  "correct": "d5"
+}, {
+  "questionName": "При участии какого из ионов осуществляется градиент-зависимый траснпорт глюкозы в клетку?",
+  "answers": {
+    "a5": "Na",
+    "b5": "Mg",
+    "c5": "K",
+    "d5": "Cl"
+  },
+  "correct": "a1"
+}, {
+  "questionName": "Что характерно для ГЛЮТ-4 (глюкозного траснпортера)?",
+  "answers": {
+    "a5": "инсулинозависимость",
+    "b5": "встерчается в толстом кишечнике",
+    "c5": "встречается в тонком кишечнике",
+    "d5": "обеспечивает непрерывный поток глюкозы к тканям"
+  },
+  "correct": "d5"
+}, {
+  "questionName": "Трансмембранный транспорт фруктозы осуществляется через?",
+  "answers": {
+    "a5": "ГЛЮТ-1",
+    "b5": "ГЛЮТ-2",
+    "c5": "ГЛЮТ-4",
+    "d5": "ГЛЮТ-5"
+  },
+  "correct": "d5"
+}];
+},{}],"../js/quizzes/main.js":[function(require,module,exports) {
+"use strict";
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
+var _carbs = _interopRequireDefault(require("../../quizes_json/carbs.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// LOAD QUIZ FROM .JSON FILE USING PARCEL
+//  GET HTML ELEMENTS
+var main = document.querySelector("main");
+var form = document.querySelector("form");
+var checkBtn = document.querySelector("button[type=submit]");
+var restartBtn = document.querySelector("button.restart-quiz");
+var body = document.querySelector("body"); //DISABLE QUIZ RESTARTING BUTTON
+
+restartBtn.disabled = true;
+var outputQ = ""; //CREATE QUIZBOX WITH ANSWERS INSIDE IT
+
+_carbs.default.forEach(function (questions, qNumber) {
+  outputQ += "<div class=\"question-box\">\n  <h6> ".concat(questions.questionName, " </h6>\n  "); //GET ANSWERS IDs
+
+  var outputA = "";
+
+  for (var letter in questions.answers) {
+    outputA += "<label>\n                  <div class='single-choice-box'>\n                    <input type='radio' name='".concat(qNumber + 1, "' value='").concat(letter, "' id='").concat(letter, "'>\n                      <p> ").concat(questions.answers[letter], " </p>\n                    <span class=\"input-box\"> </span>\n                  </div>\n                </label>\n                ");
   }
 
-  return bundleURL;
-}
+  outputQ += "<div class='choices-box'> ".concat(outputA, " </div>");
+  outputQ += "</div>";
+  form.innerHTML = outputQ;
+}); //COUNT THE AMOUNT OF CORRECT ANSWERS
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-    if (matches) {
-      return getBaseURL(matches[0]);
+checkBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  var countTrue = 0;
+  var countFalse = 0;
+  var availableAnswers = document.querySelectorAll("div.question-box");
+  var selectedAnswers = document.querySelectorAll("input[type=radio]:checked"); //CHECK IF ALL QUESTIONS ARE ANSWERED
+
+  if (availableAnswers.length !== selectedAnswers.length) {
+    alertOnOff('<p class="info-box-text"> Пожалуйста, ответьте на все вопросы. </p>');
+  } else {
+    //CREATE RESULTBOX CONTAINER
+    var resultBox = document.createElement("div");
+    resultBox.className = "result";
+    main.appendChild(resultBox); //LOOP THROUGH THIS CHOICES
+
+    for (var i = 0; i < selectedAnswers.length; i++) {
+      if (selectedAnswers[i].value === _carbs.default[i].correct) {
+        countTrue += 1;
+        availableAnswers[i].style.borderLeft = "3px solid #136F63";
+      } else {
+        countFalse += 1;
+        availableAnswers[i].style.borderLeft = "3px solid #A22C29";
+      } //SHOW FINAL RESULT --- CORRECT AND INCORRECT ANSWERS INCLUDED
+
+
+      var output = "\u0412\u0430\u0448 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 ".concat(countTrue, " \u0438\u0437 ").concat(availableAnswers.length, ".");
+      resultBox.innerHTML = output;
+      restartBtn.disabled = false;
+      checkBtn.disabled = true;
     }
   }
+}); // RESTARTING THE QUIZ
 
-  return '/';
+restartBtn.addEventListener("click", function (e) {
+  //REMOVE RESULT CONTAINER
+  var resultBox = document.querySelector(".result");
+  resultBox.remove(); // MAKING CHECK BUTTON AVAILABLE
+
+  checkBtn.disabled = false; // RESESTING RESULTING
+
+  var choicesRadio = document.querySelectorAll("input[type=radio]");
+  choicesRadio.forEach(function (input, index) {
+    input.checked = false;
+  }); //DISABLE RESULT BUTTON
+
+  restartBtn.disabled = true; //REMOVING WRONG/CORRECT LEFT BORDER OF QUESTION-BOXES
+
+  var availableAnswers = document.querySelectorAll("div.question-box");
+  availableAnswers.forEach(function (question, index) {
+    question.style.borderLeft = "0px ";
+  });
+}); // ALERT BUTTONS
+
+function alertOnOff(txt) {
+  // ELEMENT CREATING
+  var divHoverMain = document.createElement('div');
+  divHoverMain.className = 'info-main';
+  var divHover = document.createElement('div');
+  divHover.className = 'hover';
+  var infoBox = document.createElement('div');
+  infoBox.className = 'info-box';
+  infoBox.innerHTML = txt;
+  var buttonInfoBox = document.createElement('button');
+  buttonInfoBox.className = 'info-box-button';
+  buttonInfoBox.textContent = 'OK!'; // CREATED ELEMENTS APPENDING
+
+  body.appendChild(divHoverMain);
+  divHoverMain.appendChild(divHover);
+  divHoverMain.appendChild(infoBox);
+  infoBox.appendChild(buttonInfoBox); //MAIN ACTIONS
+
+  divHover.addEventListener('click', function () {
+    body.removeChild(divHoverMain);
+  });
+  buttonInfoBox.addEventListener('click', function () {
+    body.removeChild(divHoverMain);
+  }); // SOME STYLING
+
+  divHover.addEventListener('mouseover', function (e) {
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.3)';
+    divHover.style.cursor = 'pointer';
+  });
+  divHover.addEventListener('mouseout', function (e) {
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.9)';
+  });
+  buttonInfoBox.addEventListener('mouseover', function (e) {
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.3)';
+  });
+  buttonInfoBox.addEventListener('mouseout', function (e) {
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.9)';
+  });
 }
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../css/index-main.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+;
+},{"../../quizes_json/carbs.json":"../quizes_json/carbs.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +523,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/index-main.04448b54.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/quizzes/main.js"], null)
+//# sourceMappingURL=/main.82624d6b.js.map

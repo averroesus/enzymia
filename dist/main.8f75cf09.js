@@ -118,27 +118,27 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"../js/main.js":[function(require,module,exports) {
-var form = document.querySelector("form");
-var checkBtn = document.querySelector("button[type=submit]");
-var restartBtn = document.querySelector("button.restart-quiz");
-var resultBox = document.querySelector(".result");
+var form = document.querySelector('form');
+var checkBtn = document.querySelector('button[type=submit]');
+var restartBtn = document.querySelector('button.restart-quiz');
+var resultBox = document.querySelector('.result');
 console.log(resultBox); // LOAD QUIZ FOROM .JSON FILE
 
 var reqQuiz = new XMLHttpRequest();
-reqQuiz.open("GET", "/quizes(json)/iodine.json");
+reqQuiz.open('GET', '/quizes(json)/iodine.json');
 
 reqQuiz.onload = function () {
   var quizContent = JSON.parse(reqQuiz.responseText); // console.log(quizContent);
   //DISABLE QUIZ RESTARTING BUTTON
 
   restartBtn.disabled = true;
-  var outputQ = ""; //CREATE QUIZBOX WITH ANSWERS INSIDE IT
+  var outputQ = ''; //CREATE QUIZBOX WITH ANSWERS INSIDE IT
 
   quizContent.forEach(function (questions, qNumber) {
     // console.log(questions.answers);
     outputQ += "<div class=\"question-box\">\n    <h6> ".concat(questions.questionName, " </h6>\n    "); //GET ANSWERS IDs
 
-    var outputA = "";
+    var outputA = '';
 
     for (letter in questions.answers) {
       outputA += "<label>\n                    <div class='single-choice-box'>\n                      <input type='radio' name='".concat(qNumber + 1, "' value='").concat(letter, "' id='").concat(letter, "'>\n                        <p> ").concat(questions.answers[letter], " </p>\n                      <span class=\"input-box\"> </span>\n                    </div>\n                  </label>\n                  ");
@@ -149,15 +149,15 @@ reqQuiz.onload = function () {
     form.innerHTML = outputQ;
   }); //COUNT THE AMOUNT OF CORRECT ANSWERS
 
-  checkBtn.addEventListener("click", function (e) {
+  checkBtn.addEventListener('click', function (e) {
     e.preventDefault();
     countTrue = 0;
     countFalse = 0;
-    var availableAnswers = document.querySelectorAll("div.question-box");
-    var selectedAnswers = document.querySelectorAll("input[type=radio]:checked"); //CHECK IF ALL QUESTIONS ARE ANSWERED
+    var availableAnswers = document.querySelectorAll('div.question-box');
+    var selectedAnswers = document.querySelectorAll('input[type=radio]:checked'); //CHECK IF ALL QUESTIONS ARE ANSWERED
 
     if (availableAnswers.length !== selectedAnswers.length) {
-      window.alert("Пожалуйста, ответьте на все вопросы");
+      window.alert('Пожалуйста, ответьте на все вопросы');
     } else {
       //LOOP THROUGH THIS CHOICES
       for (var i = 0; i < selectedAnswers.length; i++) {
@@ -206,7 +206,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64034" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50075" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

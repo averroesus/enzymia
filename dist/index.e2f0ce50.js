@@ -117,79 +117,72 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"../js/index/index.js":[function(require,module,exports) {
+"use strict";
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.alertOnOff = alertOnOff;
+var calButton = document.querySelector('a.cal');
+var body = document.querySelector('body');
+var progress = document.querySelectorAll('.progress'); // GOING THROUGH PROGRESS ARRAY
 
-  return bundleURL;
+for (var i = 0; i < progress.length; i++) {
+  var singleALink = progress[i];
+  singleALink.addEventListener('click', function () {
+    alertOnOff('<p class="info-box-text"> В РАЗРАБОТКЕ . . .  </p>');
+  });
 }
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+; // -----------------
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
+calButton.addEventListener('click', function () {
+  alertOnOff('<p class="info-box-text"> ГЕКСО & ГЛЮКОКИНАЗЫ <br> запланированы на середину января. <br> </p> <p class="info-box-text">Не пропустите.</p>');
+});
 
-  return '/';
+function alertOnOff(txt) {
+  // ELEMENT CREATING
+  var divHoverMain = document.createElement('div');
+  divHoverMain.className = 'info-main';
+  var divHover = document.createElement('div');
+  divHover.className = 'hover';
+  var infoBox = document.createElement('div');
+  infoBox.className = 'info-box';
+  infoBox.innerHTML = txt;
+  var buttonInfoBox = document.createElement('button');
+  buttonInfoBox.className = 'info-box-button';
+  buttonInfoBox.textContent = 'OK!'; // CREATED ELEMENTS APPENDING
+
+  body.appendChild(divHoverMain);
+  divHoverMain.appendChild(divHover);
+  divHoverMain.appendChild(infoBox);
+  infoBox.appendChild(buttonInfoBox); //MAIN ACTIONS
+
+  divHover.addEventListener('click', function () {
+    body.removeChild(divHoverMain);
+  });
+  buttonInfoBox.addEventListener('click', function () {
+    body.removeChild(divHoverMain);
+  }); // SOME STYLING
+
+  divHover.addEventListener('mouseover', function (e) {
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.4)';
+    divHover.style.cursor = 'pointer';
+  });
+  divHover.addEventListener('mouseout', function (e) {
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.8)';
+  });
+  buttonInfoBox.addEventListener('mouseover', function (e) {
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.4)';
+  });
+  buttonInfoBox.addEventListener('mouseout', function (e) {
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.8)';
+  });
 }
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../css/index-main.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+;
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +386,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/index-main.04448b54.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/index/index.js"], null)
+//# sourceMappingURL=/index.e2f0ce50.js.map
