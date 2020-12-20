@@ -1,0 +1,22 @@
+
+div.changelog {
+    line-height: 2em;
+}
+
+ul.update-version {
+    font-weight: 700;
+}
+
+ul.update-item {
+    font-weight: 300;
+}
+
+@media screen and (max-width: 400px) {
+    ul.update-version {
+        padding-left: 16px;  
+    }
+
+    ul.update-item {
+        padding-left: 8px;
+    }
+}
