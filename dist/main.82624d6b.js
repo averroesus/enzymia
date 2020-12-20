@@ -138,7 +138,7 @@ module.exports = [{
   },
   "correct": "b2"
 }, {
-  "questionName": "Резервным полисахридом у людей является",
+  "questionName": "Резервным полисахаридом у людей является",
   "answers": {
     "a3": "крахмал",
     "b3": "целлюлоза",
@@ -177,7 +177,7 @@ module.exports = [{
   "questionName": "Что характерно для ГЛЮТ-4 (глюкозного траснпортера)?",
   "answers": {
     "a5": "инсулинозависимость",
-    "b5": "встерчается в толстом кишечнике",
+    "b5": "встречается в толстом кишечнике",
     "c5": "встречается в тонком кишечнике",
     "d5": "обеспечивает непрерывный поток глюкозы к тканям"
   },
@@ -347,7 +347,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50363" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61875" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

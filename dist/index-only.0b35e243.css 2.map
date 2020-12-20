@@ -1,0 +1,1 @@
+{"version":3,"sources":["index-only.css"],"names":[],"mappings":"AAAA,aACI,iBAAkB,CAClB,QAAS,CACT,UAAW,CAEX,YACJ","file":"index-only.0b35e243.css","sourceRoot":"../html","sourcesContent":["aside.apprec {\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n\n    margin-top: 0;\n}"]}
