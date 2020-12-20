@@ -8,7 +8,7 @@ body {
   display: grid;
   min-width: 300px;
   margin: 0;
-  grid-template: repeat(3, auto auto auto) / auto;
+  grid-template: repeat(4, auto) / repeat(1, auto);
 }
 
 header {
@@ -22,8 +22,8 @@ header {
 }
 
 header > div {
-  /* font-family: 'Chango', monospace; */
-  font-weight: 500;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
   font-size: 2em;
   margin-top: 12px;
   margin-bottom: 12px;
@@ -38,39 +38,50 @@ a.home {
   font-family: 'Chango', monospace;
 }
 
+span#red {
+  color: #a22c29;
+}
+
 /* ----------------------- */
 
 main {
   grid-column: 1 / -1;
 
-  /* border: 1px dashed red; */
-  font-family: Open Sans, sans-serif;
-  font-weight: 100;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
 
   /* THIS IS A HORIZONTAL ALIGN ACCRD. TO FLEX = COLUMN  */
   align-items: center; 
-
+  
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  letter-spacing: 0.12mm;
+  line-height: 1.2em;
+  
   padding: 0px;
   margin: 6px 6px 6px 6px;
-}
 
-div.menu {
-  border: 1px solid black;
-}
-
-/* FOOTER STYLED */
-
-footer {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-
-  /* grid-column: 1 / -1; */
-  font-family: "Open Sans", sans-serif;
   /* border: 1px dashed red; */
-  border-top: 3px solid #a22c29;
 }
 
+/* ASIDE APPREC */
+
+aside.apprec {
+  position: relative;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+
+  margin-top: 2cm;
+  
+  background-color: #0E1B0E;
+  color: #fcfcfc;
+}
+
+aside.apprec p {
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  margin: 16px 0px 16px 0px;
+}

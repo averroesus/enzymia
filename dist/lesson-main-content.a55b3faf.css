@@ -1,24 +1,10 @@
-main {
-    padding-left: 10px;
-    padding-right: 6px;
-}
-
-/* main div.image-container {
-    text-align: center;
-    border: 1px solid #dbdbdb;
-    border-radius: 3px;
-    background-color: #ededed;
-    padding: 10px;
-    width: 40%;
-    margin: auto;
-} */
-
 /* STYLING PARAGRAPH */
 
 p {
     text-indent: 0.5cm;
-    text-align: justify;
-    margin: 24px auto 2px auto;
+    margin: 24px 0 0 0;
+    line-height: 1.7em;
+    font-weight: 700;
     /* padding-left: 4px; */
     /* border-left: 2px solid #a22c29; */
 }
@@ -36,7 +22,7 @@ div.note {
     border: 0px solid #dbdbdb;
     border-radius: 6px;
     background-color: #ededed;
-    margin: 16px auto 0 auto;
+    margin: 16px auto 10px auto;
 }
 
 div.content {
@@ -51,12 +37,17 @@ div.content {
 }
 
 ul {
-    margin: 0px 5px;
+    margin-top: 0px;
 }
 
 li {
-    margin-bottom: 2px;
+    margin-top: 6px;
 }
+
+li:last-child {
+    margin-bottom: 12px;
+}
+
 
 /* FORMATTING LITTLE INFO BUTTON */
 
@@ -86,10 +77,6 @@ li {
 }
 
 @media screen and (max-width: 700px) {
-
-    main {
-    padding-left: 6px;
-    }
 
     p {
     padding-left: 0px;
