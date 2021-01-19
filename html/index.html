@@ -6,86 +6,125 @@
     <link rel="stylesheet" text="text/css" href="../css/index-main.css" />
     <link rel="stylesheet" text="text/css" href="../css/index-body.css" />
     <link rel="stylesheet" text="text/css" href="../css/footer.css" />
-    <link rel="stylesheet" text="text/css" href="../css/index-only.css" />
-    
+    <link rel="stylesheet" text="text/css" href="../css/enz-table.css" />
+
     <!-- REFERRING TO GOOGLE FONTS  -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Enzymia</title>
   </head>
 
   <body>
     <header>
-      <div> <a class="home" href="./index.html"> <span id='red'>ENZ</span>YMIA </a> </div>
+      <div>
+        <a class="home" href="./index.html"> <span id="red">ENZ</span>YMIA </a>
+      </div>
     </header>
 
     <!-- <div class="menu"> SOME INFO HERE </div> -->
 
     <main>
+      <div class="lining">
+        <nav class="perks">
+          <h3>ДОПОЛНИТЕЛЬНО</h3>
+          <div class="list-item">
+            <regular-btn
+              name="ОБЗОР МЕТАБОЛИЧЕСКИХ ПУТЕЙ"
+              link="#"
+            ></regular-btn>
+          </div>
+          <div class="list-item">
+            <footer-btns
+              name="КОЛОДА АНКИ (версия 0.1)"
+              link="#"
+              image="anki"
+            ></footer-btns>
+          </div>
+        </nav>
 
-      <nav class="quiz-list">
+        <nav class="quiz-list">
+          <h3>МЕТАБОЛИЗМ УГЛЕВОДОВ</h3>
+          <div class="list-item">
+            <regular-btn name="УГЛЕВОДЫ" link="./lessons/carbs_ls.html">
+            </regular-btn>
+            <little-btn image="test_icon" link="./quizzes/carbs_qz.html">
+            </little-btn>
+          </div>
 
-        <div class="list-item">
-          <a class="lesson-name" href="/lessons/carbs_ls.html"> УГЛЕВОДЫ </a>
-          <a class ="quiz" href="/quizzes/carbs_qz.html"> <img  class="test" src="../img/test_icon.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item">
+            <regular-btn
+              name="ГЕКСО & ГЛЮКОКИНАЗЫ"
+              link="./lessons/hexokinases.html"
+            >
+            </regular-btn>
+            <a href="./lessons/hexokinases.html">here</a>
+            <little-btn image="test_icon" link="#"> </little-btn>
+          </div>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ГЕКСО & ГЛЮКОКИНАЗЫ </a> 
-          <a class ="quiz cal" href="#"> <img  class="cal" src="../img/calendar-plus.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-          <!-- <button class="date-info"> <img src="../img/calendar-plus.svg" alt="КАЛЕНДАРЬ" class="cal"> </button> -->
-        </div>
+          <div class="list-item">
+            <regular-btn name="ГЛИКОЛИЗ" link="#"> </regular-btn>
+            <little-btn image="gear" link="#"> </little-btn>
+          </div>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ГЛИКОЛИЗ </a>
-          <a class ="quiz progress" href="#"> <img  class="gear" src="../img/gear.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item">
+            <regular-btn name="ГЛИКОНЕОГЕНЕЗ" link="#"> </regular-btn>
+            <little-btn image="gear" link="#"> </little-btn>
+          </div>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ГЛИКОНЕОГЕНЕЗ </a>
-          <a class ="quiz progress" href="#"> <img  class="gear" src="../img/gear.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item not-ready">
+            <regular-btn name="ГЛИКОГЕН" link="#"> </regular-btn>
+            <little-btn image="gear" link="#"> </little-btn>
+          </div>
 
-        <div class="list-item not-ready">
-          <a class="not-ready" href="#"> ГЛИКОГЕН </a>
-          <a class ="quiz progress" href="#"> <img  class="gear" src="../img/gear.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item">
+            <regular-btn name="ПЕНТОЗО-ФОСФАТНЫЙ ПУТЬ" link="#"> </regular-btn>
+            <little-btn image="gear" link="#"> </little-btn>
+          </div>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ПЕНТОЗО-ФОСФАТНЫЙ ПУТЬ </a>
-          <a class ="quiz progress" href="#"> <img  class="gear" src="../img/gear.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item">
+            <regular-btn name="ФРУКТОЗА И ГАЛАКТОЗА" link="#"> </regular-btn>
+            <little-btn image="gear" link="#"> </little-btn>
+          </div>
+        </nav>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ФРУКТОЗА И ГАЛАКТОЗА </a>
-          <a class ="quiz progress" href="#"> <img  class="gear" src="../img/gear.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
-        
-      </nav>
-
+        <nav class="notes">
+          <h3>ЗАМЕТКИ</h3>
+          <div class="list-item">
+            <footer-btns
+              image="table-icon"
+              name="КЛАССИФИКАЦИЯ ФЕРМЕНТОВ"
+            ></footer-btns>
+          </div>
+          <div class="list-item">
+            <footer-btns
+              name="УРАВНЕНИЕ МИХАЭЛИСА-МЕНТЕН"
+              image="youtube"
+              link="https://www.youtube.com/watch?v=Lgefl_z_2U0"
+              target="_blank"
+            ></footer-btns>
+          </div>
+        </nav>
+      </div>
     </main>
 
     <footer>
+      <footer-btns name="Enzemia" image="home" link="./index.html">
+      </footer-btns>
 
-      <a href="./index.html" class="home-footer link-footer"> 
-        <p> Enzemia </p>
-        <img class="changelog" src="../img/house.svg" alt="Домой">
-      </a>
-
-      <a href="./changelog.html" class="changelog link-footer"> 
-        <p> Анаболизм </p>
-        <img class="changelog" src="../img/lightning.svg" alt="Обновления">
-      </a>
-
+      <footer-btns name="Анаболизм" image="lightning" link="./changelog.html">
+      </footer-btns>
     </footer>
 
     <aside class="apprec">
-
-      <p> Спасибо edition.13th и AVERROESUS</p>
-
+      <p>Спасибо edition.13th и AVERROESUS</p>
     </aside>
     <!-- SCRIPTS HERE  -->
     <script type="module" src="../js/index/index.js"></script>
+    <script type="module" src="../js/webcomponents.js"></script>
+    <script type="module" src="../js/index/table.js"></script>
   </body>
 </html>

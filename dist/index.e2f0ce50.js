@@ -124,22 +124,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.alertOnOff = alertOnOff;
-var calButton = document.querySelector('a.cal');
+exports.default = void 0;
 var body = document.querySelector('body');
-var progress = document.querySelectorAll('.progress'); // GOING THROUGH PROGRESS ARRAY
-
-for (var i = 0; i < progress.length; i++) {
-  var singleALink = progress[i];
-  singleALink.addEventListener('click', function () {
-    alertOnOff('<p class="info-box-text"> В РАЗРАБОТКЕ . . .  </p>');
-  });
-}
-
-; // -----------------
-
-calButton.addEventListener('click', function () {
-  alertOnOff('<p class="info-box-text"> ГЕКСО & ГЛЮКОКИНАЗЫ <br> запланированы на середину января. <br> </p> <p class="info-box-text">Не пропустите.</p>');
-});
 
 function alertOnOff(txt) {
   // ELEMENT CREATING
@@ -171,17 +157,18 @@ function alertOnOff(txt) {
     divHover.style.cursor = 'pointer';
   });
   divHover.addEventListener('mouseout', function (e) {
-    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.8)';
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.9)';
   });
   buttonInfoBox.addEventListener('mouseover', function (e) {
     divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.4)';
   });
   buttonInfoBox.addEventListener('mouseout', function (e) {
-    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.8)';
+    divHover.style.backgroundColor = 'rgba(237, 237, 237, 0.9)';
   });
 }
 
-;
+var _default = alertOnOff;
+exports.default = _default;
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -210,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62046" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60654" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

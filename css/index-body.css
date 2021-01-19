@@ -1,7 +1,7 @@
 /* PAGE LAYOUT (AND SIMPLE) STYLING */
 
 html {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 body {
@@ -18,12 +18,11 @@ header {
   justify-content: center;
   /* border: 1px dashed red; */
   border-bottom: 4px solid #a22c29;
-  background-color: #EDEDE8;
+  background-color: #edede8;
 }
 
 header > div {
   font-family: Helvetica, sans-serif;
-  font-weight: 300;
   font-size: 2em;
   margin-top: 12px;
   margin-bottom: 12px;
@@ -50,19 +49,24 @@ main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
 
-  /* THIS IS A HORIZONTAL ALIGN ACCRD. TO FLEX = COLUMN  */
-  align-items: center; 
-  
   font-family: Helvetica, sans-serif;
-  font-weight: lighter;
   letter-spacing: 0.12mm;
   line-height: 1.2em;
-  
-  padding: 0px;
-  margin: 6px 6px 6px 6px;
+
+  margin: 0px 6px 0px 6px;
 
   /* border: 1px dashed red; */
+}
+
+main > div.lining > nav {
+  /* border: 1px dashed red; */
+}
+
+div.lining {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 /* ASIDE APPREC */
@@ -75,13 +79,55 @@ aside.apprec {
   justify-content: center;
 
   margin-top: 2cm;
-  
-  background-color: #0E1B0E;
+
+  background-color: #0e1b0e;
   color: #fcfcfc;
 }
 
 aside.apprec p {
   font-family: Helvetica, sans-serif;
-  font-weight: lighter;
   margin: 16px 0px 16px 0px;
+}
+
+@media screen and (max-width: 1160px) {
+  div.lining {
+    flex-flow: column;
+  }
+
+  nav.quiz-list {
+    border-left: 0px;
+    border-right: 0px;
+  }
+
+  div.lining > nav.perks {
+    order: 2;
+  }
+
+  nav {
+    border-bottom: 3px solid #dfdfdf;
+  }
+
+  nav.perks {
+    border-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  html {
+    font-size: 16px;
+  }
+
+  main {
+    margin: 0px;
+  }
+}
+
+@media screen and (min-height: 890px) {
+  aside.apprec {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    margin-top: 0;
+  }
 }

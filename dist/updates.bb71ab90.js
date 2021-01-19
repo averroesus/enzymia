@@ -121,13 +121,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 module.exports = [{
   "updateVersion": "Обновление 0.1.1",
   "updateItems": {
-    "1": "Игра слов. Изменено название сайта на [Enzemia]*.",
+    "1": "Игра слов. Изменено название сайта на [Enzemia / Enzymia]*.",
     "2": "Выравнивание границ. Это не бросается в глаза, но сечйас сайт отцентрован",
     "3": "Обновление интерфейса",
     "4": "Все начинается на главной странице. Перейти на главную страницу можно нажав на название сайта в заголовке.",
     "5": "Надоедливые всплывающие окна. Добавлены окна с уведомлениями. ",
-    "6": "Читатебльность - это важно. Изменен шрифт.",
-    "7": "Маленькие шаги - большие цели [Анаболизм]. Добавлени раздел с историей обновлений. "
+    "6": "Читабельность - это важно. Изменен шрифт.",
+    "7": "Маленькие шаги - большие цели [Анаболизм]. Добавлен раздел с историей обновлений. "
   }
 }];
 },{}],"../js/changelog/updates.js":[function(require,module,exports) {
@@ -187,7 +187,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62046" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59132" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
