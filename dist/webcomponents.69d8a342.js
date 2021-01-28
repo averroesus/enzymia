@@ -129,8 +129,8 @@ module.exports = "/gear.c9d4064d.svg";
 module.exports = "/gluc-fruc-galac.8cac750e.svg";
 },{}],"../img/home.svg":[function(require,module,exports) {
 module.exports = "/home.b3ca861b.svg";
-},{}],"../img/info_icon.svg":[function(require,module,exports) {
-module.exports = "/info_icon.04c735b3.svg";
+},{}],"../img/info-square.svg":[function(require,module,exports) {
+module.exports = "/info-square.f018c095.svg";
 },{}],"../img/lightning.svg":[function(require,module,exports) {
 module.exports = "/lightning.575941a7.svg";
 },{}],"../img/remeber.svg":[function(require,module,exports) {
@@ -149,14 +149,14 @@ module.exports = {
   "gear": require("./gear.svg"),
   "gluc-fruc-galac": require("./gluc-fruc-galac.svg"),
   "home": require("./home.svg"),
-  "info_icon": require("./info_icon.svg"),
+  "info-square": require("./info-square.svg"),
   "lightning": require("./lightning.svg"),
   "remeber": require("./remeber.svg"),
   "table-icon": require("./table-icon.svg"),
   "test_icon": require("./test_icon.svg"),
   "youtube": require("./youtube.svg")
 };
-},{"./anki.svg":"../img/anki.svg","./calendar-plus.svg":"../img/calendar-plus.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./home.svg":"../img/home.svg","./info_icon.svg":"../img/info_icon.svg","./lightning.svg":"../img/lightning.svg","./remeber.svg":"../img/remeber.svg","./table-icon.svg":"../img/table-icon.svg","./test_icon.svg":"../img/test_icon.svg","./youtube.svg":"../img/youtube.svg"}],"../js/webcomponents.js":[function(require,module,exports) {
+},{"./anki.svg":"../img/anki.svg","./calendar-plus.svg":"../img/calendar-plus.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./home.svg":"../img/home.svg","./info-square.svg":"../img/info-square.svg","./lightning.svg":"../img/lightning.svg","./remeber.svg":"../img/remeber.svg","./table-icon.svg":"../img/table-icon.svg","./test_icon.svg":"../img/test_icon.svg","./youtube.svg":"../img/youtube.svg"}],"../js/webcomponents.js":[function(require,module,exports) {
 "use strict";
 
 var _ = _interopRequireDefault(require("../img/*.svg"));
@@ -361,7 +361,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54432" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56419" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

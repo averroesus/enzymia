@@ -27,6 +27,7 @@ div.note {
 div.content {
   padding: 6px;
   align-self: center;
+  line-height: 1.3em;
 }
 
 #remember {
@@ -117,8 +118,8 @@ table.lesson-table tr:nth-child(1) td {
 
 table.lesson-table td {
   padding: 6px;
-  font-size: 1.3em;
-  line-height: 1.5em;
+  font-size: 20px;
+  line-height: 1.4em;
 }
 
 /* MEDIA QUERIES */

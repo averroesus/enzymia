@@ -7,25 +7,62 @@ form {
 /* QUESTIONBOX STYLING */
 
 div.question-box {
+  display: block;
   /* border: 1px dashed black;*/
   padding: 9px 3px 3px 3px;
   width: 70vw;
   margin-top: 0px;
   margin-bottom: 6px;
-  border-radius: 2px;
+  border-radius: 6px;
   transition: background-color 0.5s;
   background-color: #fcfcfc;
   box-sizing: border-box;
 }
 
-h6 {
+div.question-name-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+div.question-name-box img {
+  height: 2em;
+  width: 2em;
+  transition: background-color 0.3s;
+}
+
+div.question-name-box img:hover {
+  background-color: #fcfcfc;
+  cursor: pointer;
+}
+
+div.question-name-box button {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+  margin-right: 6px;
+  margin-left: 16px;
+}
+
+div.explain-cont p {
+  border-top: 3px solid #004e98;
+  text-indent: 0.3cm;
+  line-height: 1.5em;
+  margin: 8px;
+  margin-bottom: 4px;
+  padding-top: 6px;
+}
+
+div.question-name-box h6 {
   font-size: 1.05em;
   font-weight: normal;
   margin-top: 2px;
   margin-bottom: 7px;
   margin-left: 10px;
   padding-left: 7px;
-  border-left: 2px solid #a22c29;
+  border-left: 3px solid #a22c29;
 }
 
 div.question-box:hover {
@@ -48,7 +85,7 @@ div.single-choice-box {
   margin: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 div.single-choice-box:hover {
@@ -65,7 +102,7 @@ p {
 
 /* RADIO BUTTON STYLING */
 
-input[type="radio"] {
+input[type='radio'] {
   align-items: center;
   border: 2px solid lime;
   display: none;
@@ -78,13 +115,13 @@ span.input-box {
   height: 12px;
   margin-left: 8px;
   margin-right: 8px;
-  border-radius: 2px;
+  border-radius: 4px;
   transition: transform 0.02s;
   box-sizing: border-box;
 }
 
 span.input-box:after {
-  content: "";
+  content: '';
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -94,11 +131,11 @@ span.input-box:after {
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.1s;
   background-color: #004e98;
-  border-radius: 2px;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
-input[type="radio"]:checked ~ span.input-box:after {
+input[type='radio']:checked ~ span.input-box:after {
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -122,8 +159,8 @@ div > button.submit-quiz,
 div > button.restart-quiz {
   box-sizing: border-box;
   border: none;
-  border-radius: 3px;
-  background-color: #EDEDED;
+  border-radius: 6px;
+  background-color: #ededed;
   font-size: 1.2em;
   font-weight: 900;
   padding: 13px;
@@ -153,7 +190,7 @@ div > button.submit-quiz:disabled:hover {
 
 div > button.submit-quiz:hover,
 button.restart-quiz:hover {
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
 }
 
 /* STYLING RESULT BOX BUTTON */
@@ -161,7 +198,7 @@ button.restart-quiz:hover {
 div.result {
   box-sizing: border-box;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   background-color: #fcfcfc;
   font-size: 1.2em;
   font-weight: bold;
@@ -245,7 +282,7 @@ div.info-box {
   height: auto;
   width: 50%;
 
-  border-radius: 4px;
+  border-radius: 6px;
   border: 2px solid #dbdbdb;
   padding: 10px;
   background-color: #ededed;
@@ -271,7 +308,7 @@ p.info-box-text {
 button.info-box-button {
   border: none;
   margin-top: 16px;
-  border-radius: 2px;
+  border-radius: 6px;
   padding: 6px;
 
   transition: background-color 0.3s;
