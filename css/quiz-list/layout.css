@@ -1,6 +1,5 @@
 html {
-  font-size: 16px;
-  
+  font-size: 20px;
 }
 
 body {
@@ -41,3 +40,9 @@ div.quiz-buttons-cont {
     padding: 5px;
   }
 } */
+
+@media screen and (max-width: 380px) {
+  html {
+    font-size: 16px;
+  }
+}

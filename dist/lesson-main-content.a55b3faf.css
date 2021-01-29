@@ -3,7 +3,7 @@
 p {
   text-indent: 0.5cm;
   margin: 24px 0 0 0;
-  line-height: 1.7em;
+  line-height: 1.3em;
   font-weight: 700;
   /* padding-left: 4px; */
   /* border-left: 2px solid #a22c29; */
@@ -108,7 +108,7 @@ table.lesson-table tr:nth-child(even) {
 }
 
 table.lesson-table tr:nth-child(1) td {
-  font-size: 1.3em;
+  font-size: inherit;
   font-family: Arial Black;
   font-weight: bold;
   text-align: center;
@@ -118,7 +118,7 @@ table.lesson-table tr:nth-child(1) td {
 
 table.lesson-table td {
   padding: 6px;
-  font-size: 20px;
+  font-size: inherit;
   line-height: 1.4em;
 }
 
@@ -157,8 +157,27 @@ table.lesson-table td {
     width: auto;
   }
 
-  table.lesson-table {
-    width: auto;
+  table.lesson-table td {
+    /* width: auto; */
+  }
+}
+
+@media screen and (max-width: 515px) {
+  table.lesson-table tr:nth-child(1) td {
+    padding: 3px;
+  }
+  table.lesson-table td {
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  table.lesson-table tr:nth-child(1) td {
+    padding: 0px;
+  }
+  table.lesson-table td {
+    padding: 3px;
+    font-size: small;
   }
 }
 

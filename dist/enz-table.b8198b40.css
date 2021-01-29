@@ -1,4 +1,4 @@
-table.enz,
+table,
 th,
 td {
   font-family: Helvetica, sans-serif;
@@ -13,8 +13,8 @@ td {
   vertical-align: text-top;
 }
 
-@media screen and (max-width: 420px) {
-  table.enz,
+@media screen and (max-width: 480px) {
+  table,
   th,
   td {
     font-size: small;

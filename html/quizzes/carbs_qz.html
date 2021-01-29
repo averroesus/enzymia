@@ -16,14 +16,37 @@
 	<link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">	
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 	
+	<style>
+		@media screen and (max-width: 515px) {
+			div.question-name {
+				display: flex;
+				flex-flow: column wrap;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#title-lesson {
+				margin-top: 10px;
+			}
+			#title {
+				display: none;
+				background-color: aqua;
+			}
+		}
+	</style>
+
 	<title> Enzymia | Углеводы </title>
 </head>
 
 <body>
 	<header>
-
-		<div class="question-name"> <a class="home" href="../index.html"> <span id='red'>ENZ</span>YMIA </a> | Углеводы </div>
-
+		<div class="question-name"> 
+			<a class="home" href="../index.html"> 
+				ENZYM<span id='red'>IA</span>
+			</a> 
+				<span id='title'>|</span> 
+				<span id='title-lesson'>Углеводы</span>
+		</div>
 	</header>
 
 	<main>
@@ -42,12 +65,9 @@
 	</footer>
 
 	<aside class="apprec">
-
 		<p> Спасибо edition.13th и AVERROESUS</p>
-  
 	</aside>
-	<!-- <script src="../../js/main.js"></script> -->
-	<script type="module" src="../../js/quizzes/main.js"></script>
+	<script type="module" src="../../js/quizzes/carbs_qz.js"></script>
 </body>
 </html>
 

@@ -1,5 +1,5 @@
 // LOAD QUIZ FROM .JSON FILE USING PARCEL
-import quizContent from '../../quizes_json/hxks.json';
+import quizContent from '../../quizes_json/carbs.json';
 import { alertOnOff } from '../index/index.js';
 import images from '../../img/*.svg';
 
@@ -55,19 +55,14 @@ checkBtn.addEventListener('click', function (e) {
     'input[type=radio]:checked'
   );
 
-  selectedAnswers.forEach((answer) => {
-    const someSpan = document.createElement('span');
-    someSpan.className = 'your-choice';
-    someSpan.textContent = '(ваш выбор)';
-    answer.parentNode.appendChild(someSpan);
-  });
-
   //CHECK IF ALL QUESTIONS ARE ANSWERED
   if (availableAnswers.length !== selectedAnswers.length) {
     alertOnOff(
       '<p class="info-box-text"> Пожалуйста, ответьте на все вопросы. </p>'
     );
   } else {
+    //RESTRICT CHANGES ON INPUTRADIO ELEMENT
+
     //CREATE RESULTBOX CONTAINER
     const resultBox = document.createElement('div');
     resultBox.className = 'result';
@@ -129,7 +124,15 @@ checkBtn.addEventListener('click', function (e) {
       allExplainBtns[i].addEventListener('click', appendExplanation);
     }
 
+    selectedAnswers.forEach((answer) => {
+      const someSpan = document.createElement('span');
+      someSpan.className = 'your-choice';
+      someSpan.textContent = '(ваш выбор)';
+      answer.parentNode.appendChild(someSpan);
+    });
+
     selectedAnswers.forEach((answer, index) => {
+      availableAnswers[index].style.borderRadius = '8px';
       if (answer.value === quizContent[index].correct) {
         countTrue += 1;
         availableAnswers[index].style.border =

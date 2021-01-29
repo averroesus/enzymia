@@ -23,6 +23,7 @@ header {
 
 header > div {
   font-family: Helvetica, sans-serif;
+  font-weight: 900;
   font-size: 2em;
   margin-top: 12px;
   margin-bottom: 12px;
@@ -69,26 +70,6 @@ div.lining {
   flex-flow: row nowrap;
 }
 
-/* ASIDE APPREC */
-
-aside.apprec {
-  position: relative;
-
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-
-  margin-top: 2cm;
-
-  background-color: #0e1b0e;
-  color: #fcfcfc;
-}
-
-aside.apprec p {
-  font-family: Helvetica, sans-serif;
-  margin: 16px 0px 16px 0px;
-}
-
 @media screen and (max-width: 1160px) {
   div.lining {
     flex-flow: column;
@@ -115,19 +96,5 @@ aside.apprec p {
 @media screen and (max-width: 380px) {
   html {
     font-size: 16px;
-  }
-
-  main {
-    margin: 0px;
-  }
-}
-
-@media screen and (min-height: 890px) {
-  aside.apprec {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-
-    margin-top: 0;
   }
 }

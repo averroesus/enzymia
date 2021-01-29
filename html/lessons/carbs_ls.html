@@ -17,14 +17,34 @@
       rel="stylesheet"
     />
 
-    <title>Enzymia | Углеводы</title>
+    <style>
+      @media screen and (max-width: 515px) {
+        div.question-name {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #title-lesson {
+          margin-top: 10px;
+        }
+        #title {
+          display: none;
+          background-color: aqua;
+        }
+      }
+    </style>
+
+    <title>Enzymia | Углводы</title>
   </head>
 
   <body>
     <header>
-      <div>
-        <a class="home" href="../index.html"> <span id="red">ENZ</span>YMIA </a>
-        | Углеводы
+      <div class="question-name">
+        <a class="home" href="../index.html"> ENZYM<span id="red">IA</span> </a>
+        <span id="title">|</span>
+        <span id="title-lesson">Углеводы</span>
       </div>
     </header>
 

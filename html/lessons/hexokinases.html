@@ -13,8 +13,8 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Chango&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Chango&display=swap"
     />
     <style>
       @media screen and (max-width: 380px) {
@@ -22,17 +22,36 @@
           margin: 0px 6px 0 6px;
         }
       }
+      @media screen and (max-width: 515px) {
+        div.question-name {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #title-lesson {
+          margin-top: 10px;
+        }
+        #title {
+          display: none;
+          background-color: aqua;
+        }
+		  }
     </style>
 
-    <title>Enzymia | ГЛК & ГКК</title>
+    <title> Enzymia | ГЛК & ГКК </title>
   </head>
 
   <body>
     <header>
-      <div>
-        <a class="home" href="../index.html"> <span id="red">ENZ</span>YMIA </a>
-        | Углеводы
-      </div>
+    	<div class="question-name"> 
+			<a class="home" href="../index.html"> 
+				ENZYM<span id='red'>IA</span> 
+			</a> 
+				<span id='title'>|</span> 
+				<span id='title-lesson'>ГЛК & ГКК</span>
+		</div>
     </header>
 
     <main>
@@ -140,10 +159,6 @@
               <td>во всех тканях кроме печени и пжж</td>
               <td>в печени и ПЖЖ</td>
             </tr>
-            <!-- <tr>
-              <td>инсулино-независимые</td>
-              <td>инсулино-зависимые</td>
-            </tr> -->
             <tr>
               <td>предостерегают клетку от перенасыщения глюкозой</td>
               <td>способствуют большему захвату глюкозы клеткой</td>
@@ -505,9 +520,9 @@
       </footer-btns>
     </footer>
 
-    <!-- <aside class="apprec">
+    <aside class="apprec">
       <p>Спасибо edition.13th и AVERROESUS</p>
-    </aside> -->
+    </aside>
 
     <script src="../../js/webcomponents.js"></script>
   </body>

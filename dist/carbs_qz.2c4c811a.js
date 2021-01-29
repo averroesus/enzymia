@@ -117,108 +117,80 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../quizes_json/hxks.json":[function(require,module,exports) {
+})({"../quizes_json/carbs.json":[function(require,module,exports) {
 module.exports = [{
-  "questionName": "Распад молекулы глюкозы в клетке носит название",
+  "questionName": "Углеводы характеризуются наличием какой-из функциональных групп?",
   "answers": {
-    "a1": "глюконеогенез",
-    "b1": "гликогенолиз",
-    "c1": "гликолиз",
-    "d1": "гидролиз"
+    "a1": "карбоксильной",
+    "b1": "карбоксильной и аминогруппы",
+    "c1": "гидроксильной",
+    "d1": "карбонильной и гидроксильной",
+    "e1": "карбонильной"
   },
-  "correct": "c1",
-  "explanation": "Глюконеогенез - процесс образования глюкозы из пирувата. (Противовес гликолизу). Гликогенолиз - процесс образования глюкозы из гликогена. Оба этих процесса поддерживают уровень глюкозы во время голодания организма. Гидролиз - процесс, в котором молекула воды разрывает химические связи."
+  "correct": "d1"
 }, {
-  "questionName": "Первая реакция в распаде глюкозы",
+  "questionName": "Молекула сахарозы является ",
   "answers": {
-    "a2": "Ф6Ф → фруктозо-1,6-бисфосфат",
-    "b2": "Г6Ф → Ф6Ф",
-    "c2": "фосфоэнолпируват → пируват",
-    "d2": "глюкоза → Г6Ф"
+    "a2": "полисахаридом",
+    "b2": "дисахаридом",
+    "c2": "олигосахаридом",
+    "d2": "моносахаридом"
   },
-  "correct": "d2",
-  "explanation": "Г6Ф → Ф6Ф является второй реакцией гликолиза. Ф6Ф → фруктозо-1,6-бисфосфат - третья реакция гликолиза, в ней образуется Ф-1,6-бисФ - изомер Ф6Ф. Фосфоэнолпируват → пируват самая последняя реакция гликолиза, далее цикл трикарбоновых кислот."
+  "correct": "b2"
 }, {
-  "questionName": "Фермент участвующий в первом этапе распада глюкозы",
+  "questionName": "Резервным полисахаридом у людей является",
   "answers": {
-    "a3": "лактак дегидрогеназа",
-    "b3": "фосфофруктокиназа",
-    "c3": "пируват дегидрогеназа",
-    "d3": "глюкокиназа"
+    "a3": "крахмал",
+    "b3": "целлюлоза",
+    "c3": "гликоген",
+    "d3": "хитин"
   },
-  "correct": "d3",
-  "explanation": "Лактат дегидрогеназа перенаправляет метаболизм пирувата (последнее образование гликолиза) в сторону синтеза молочной килсоты (лактата). Фосфофруктокиназа катализирует реакцию Ф6Ф → фруктозо-1,6-бисфосфат - третья реакция гликолиза. Пируват дегидрогенеза перенаправляет метаболизм пирувата в сторону цикла трикарбоновых кислот (цикл Кребса)."
+  "correct": "c3"
 }, {
-  "questionName": "Какой из ферментов присутствует в большинстве тканей?",
+  "questionName": "Какой из нижеперечисленных углеводов метаболизируется внутриклеточно?",
   "answers": {
-    "a4": "ГЛК",
-    "b4": "ГКК"
+    "a4": "галактоза",
+    "b4": "сахароза",
+    "c4": "хитин",
+    "d4": "лактоза"
   },
-  "correct": "b4",
-  "explanation": "Глюкокиназа в основном представлена в печени и ПЖЖ. Также она присутствует в мышцах. Гексокиназа, обладающая высоким сродством с глюкозой, (вследствие выского Km), присутствует в большинстве глюкозозависимых тканей: головной мозг, красные кровянные клетки."
+  "correct": "a4"
 }, {
-  "questionName": "Какой фермент способен метаболизировать большее количество глюкозы за единицу времени при максимальной концентрации (Vmax)?",
+  "questionName": "Трансмембранный транспорт фруктозы осуществляется через?",
   "answers": {
-    "a5": "ГЛК",
-    "b5": "ГКК"
+    "a5": "ГЛЮТ-1",
+    "b5": "ГЛЮТ-2",
+    "c5": "ГЛЮТ-4",
+    "d5": "ГЛЮТ-5"
   },
-  "correct": "a5",
-  "explanation": "Хоть и глюкокиназа не обладает высоким сродством с глюкозой, в период максимальной своей концентрации данный фермент способен метаболизировать большее количество глюкозы нежели гексокиназа."
+  "correct": "d5"
 }, {
-  "questionName": "Какой из ферментов обладает большим сродством к глюкозе?",
+  "questionName": "При участии какого из ионов осуществляется градиент-зависимый траснпорт глюкозы в клетку?",
   "answers": {
-    "a6": "ГКК",
-    "b6": "ГЛК"
+    "a5": "Na",
+    "b5": "Mg",
+    "c5": "K",
+    "d5": "Cl"
   },
-  "correct": "a6",
-  "explanation": "Глюкокиназа обладет высоким сродством с глюкозой, т.е. высокий Km. Оба этих ферментов подчиняются уравнению Михаэлиса-Ментен. Для понимания данного коцепта изучите его."
+  "correct": "a1"
 }, {
-  "questionName": "В организме глюкоза хранится в форме",
+  "questionName": "Что характерно для ГЛЮТ-4 (глюкозного траснпортера)?",
   "answers": {
-    "a7": "пирувата",
-    "b7": "жиров",
-    "c7": "лактата",
-    "d7": "гликогена"
+    "a5": "инсулинозависимость",
+    "b5": "встречается в толстом кишечнике",
+    "c5": "встречается в тонком кишечнике",
+    "d5": "обеспечивает непрерывный поток глюкозы к тканям"
   },
-  "correct": "d7",
-  "explanation": "Пируват не является формой хранения чего-либо. Жиры хранятся в форме триглицеридов. Один триглицерид состоит из одной молекулы глицерола и трех молекул жирных кислот. Лактат также не является формой хранения веществ. Но его накопление в цитоплазме очень плохо сказывается на общем метаболизме клетки. Повышается в некоторых патологических случая. Гликогену свойственно накапливаться в мышцах и в печени. Причем основным депо гликогена является печень."
+  "correct": "d5"
 }, {
-  "questionName": "Основным органом для хранения глюкозы является",
+  "questionName": "Трансмембранный транспорт фруктозы осуществляется через?",
   "answers": {
-    "a8": "красные клетки крови",
-    "b8": "жировая ткань",
-    "c8": "печень",
-    "d8": "головной мозг"
+    "a5": "ГЛЮТ-1",
+    "b5": "ГЛЮТ-2",
+    "c5": "ГЛЮТ-4",
+    "d5": "ГЛЮТ-5"
   },
-  "correct": "c8",
-  "explanation": "Лактат дегидрогеназа перенаправляет метаболизм пирувата (последнее образование гликолиза) в сторону синтеза молочной килсоты (лактата). Фосфофруктокиназа катализирует реакцию Ф6Ф → фруктозо-1,6-бисфосфат - третья реакция гликолиза. Пируват дегидрогенеза перенаправляет метаболизм пирувата в сторону цикла трикарбоновых кислот (цикл Кребса)."
-}, {
-  "questionName": "Ингибитором ГЛК является",
-  "answers": {
-    "a9": "пируват",
-    "b9": "Ф6Ф",
-    "c9": "Г6Ф",
-    "d9": "фруктозо-1,6-бисфосфат"
-  },
-  "correct": "b9",
-  "explanation": "В качестве ингибиторов активности тех или иных ферментов выступают органические соединения , НО в качестве ингибиторов синтеза орагинческих соединений могут выступают и ферменты, и другие другие орагнические соединения. Соединения способные тормозить синтез пирувата и Ф-1,6-бисФ будут рассматриваться на следующем уроке. Здесь стоит отметить, что из рис.1 данного урока следует, что ингибитором фермента ГЛК является накопление Ф6Ф в цитоплазме клетки. Высокая коцентрация Г6Ф обосновывает торможение гексокинзы."
-}, {
-  "questionName": "Хроническая гемолитическая анемия - патология, ассоциированная с",
-  "answers": {
-    "a10": "ГКК",
-    "b10": "ГЛК"
-  },
-  "correct": "a10",
-  "explanation": "Отличительной характеристикой патологий ГКК и ГЛК является то, что при патологиях ГЛК, коцентрация глюкозы в крови возрастает значительно. Нежели чем при патология ГКК. Стоит отметить что глюкоза является единственным источником энергии для клеток крови."
-}, {
-  "questionName": "Патологии, ассоциированные с ГЛК будут приводить к",
-  "answers": {
-    "a11": "гипогликемии",
-    "b11": "гипрегликемии",
-    "c11": "нормализации уровня сахара"
-  },
-  "correct": "b11",
-  "explanation": "Так как фермент ГЛК отвечает за метаболизм глюкозы, то на ранних этапах дефект этого фермента будет обуславливать накопление этого фермента в цитоплазме клетки (за счет инсулина глюкоза будет осуществлять транспорт из крови в клетку). На поздних этапах коцентрация глюкозы начнёт повышаться и в крови, обосновывая гипергликемию."
+  "correct": "d5"
 }];
 },{}],"../js/index/index.js":[function(require,module,exports) {
 "use strict";
@@ -311,10 +283,10 @@ module.exports = {
   "test_icon": require("./test_icon.svg"),
   "youtube": require("./youtube.svg")
 };
-},{"./anki.svg":"../img/anki.svg","./calendar-plus.svg":"../img/calendar-plus.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./home.svg":"../img/home.svg","./info-square.svg":"../img/info-square.svg","./lightning.svg":"../img/lightning.svg","./remeber.svg":"../img/remeber.svg","./table-icon.svg":"../img/table-icon.svg","./test_icon.svg":"../img/test_icon.svg","./youtube.svg":"../img/youtube.svg"}],"../js/quizzes/hxks_qz.js":[function(require,module,exports) {
+},{"./anki.svg":"../img/anki.svg","./calendar-plus.svg":"../img/calendar-plus.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./home.svg":"../img/home.svg","./info-square.svg":"../img/info-square.svg","./lightning.svg":"../img/lightning.svg","./remeber.svg":"../img/remeber.svg","./table-icon.svg":"../img/table-icon.svg","./test_icon.svg":"../img/test_icon.svg","./youtube.svg":"../img/youtube.svg"}],"../js/quizzes/carbs_qz.js":[function(require,module,exports) {
 "use strict";
 
-var _hxks = _interopRequireDefault(require("../../quizes_json/hxks.json"));
+var _carbs = _interopRequireDefault(require("../../quizes_json/carbs.json"));
 
 var _index = require("../index/index.js");
 
@@ -333,7 +305,7 @@ var body = document.querySelector('body'); //DISABLE QUIZ RESTARTING BUTTON
 restartBtn.disabled = true;
 var outputQ = ''; //CREATE QUIZBOX WITH ANSWERS INSIDE IT
 
-_hxks.default.forEach(function (questions, qNumber) {
+_carbs.default.forEach(function (questions, qNumber) {
   outputQ += "<div class=\"question-box\">\n      <div class='question-name-box'> \n        <h6> ".concat(questions.questionName, " </h6>\n      </div>\n  "); //GET ANSWERS IDs
 
   var outputA = '';
@@ -353,18 +325,13 @@ checkBtn.addEventListener('click', function (e) {
   var countTrue = 0;
   var countFalse = 0;
   var availableAnswers = document.querySelectorAll('div.question-box');
-  var selectedAnswers = document.querySelectorAll('input[type=radio]:checked');
-  selectedAnswers.forEach(function (answer) {
-    var someSpan = document.createElement('span');
-    someSpan.className = 'your-choice';
-    someSpan.textContent = '(ваш выбор)';
-    answer.parentNode.appendChild(someSpan);
-  }); //CHECK IF ALL QUESTIONS ARE ANSWERED
+  var selectedAnswers = document.querySelectorAll('input[type=radio]:checked'); //CHECK IF ALL QUESTIONS ARE ANSWERED
 
   if (availableAnswers.length !== selectedAnswers.length) {
     (0, _index.alertOnOff)('<p class="info-box-text"> Пожалуйста, ответьте на все вопросы. </p>');
   } else {
     (function () {
+      //RESTRICT CHANGES ON INPUTRADIO ELEMENT
       //CREATE RESULTBOX CONTAINER
       var resultBox = document.createElement('div');
       resultBox.className = 'result';
@@ -401,7 +368,7 @@ checkBtn.addEventListener('click', function (e) {
             var explainCont = document.createElement('div');
             explainCont.className = 'explain-cont';
             var explainP = document.createElement('p');
-            explainP.innerText = _hxks.default[i].explanation;
+            explainP.innerText = _carbs.default[i].explanation;
             explainCont.appendChild(explainP);
             allQuestionBoxesArray[i].appendChild(explainCont);
             console.log(clickCount);
@@ -423,12 +390,20 @@ checkBtn.addEventListener('click', function (e) {
         _loop(i);
       }
 
+      selectedAnswers.forEach(function (answer) {
+        var someSpan = document.createElement('span');
+        someSpan.className = 'your-choice';
+        someSpan.textContent = '(ваш выбор)';
+        answer.parentNode.appendChild(someSpan);
+      });
       selectedAnswers.forEach(function (answer, index) {
-        if (answer.value === _hxks.default[index].correct) {
+        availableAnswers[index].style.borderRadius = '8px';
+
+        if (answer.value === _carbs.default[index].correct) {
           countTrue += 1;
           availableAnswers[index].style.border = '4px solid rgba(19, 111, 99, 0.3)';
           answer.parentNode.style.backgroundColor = 'rgba(19, 111, 99, 0.3)';
-        } else if (answer.value !== _hxks.default[index].correct) {
+        } else if (answer.value !== _carbs.default[index].correct) {
           countFalse += 1;
           availableAnswers[index].style.border = '4px solid rgba(162, 44, 41, 0.3)';
           answer.parentNode.style.backgroundColor = 'rgba(162, 44, 41, 0.3)';
@@ -446,7 +421,7 @@ checkBtn.addEventListener('click', function (e) {
 restartBtn.addEventListener('click', function (e) {
   location.reload();
 });
-},{"../../quizes_json/hxks.json":"../quizes_json/hxks.json","../index/index.js":"../js/index/index.js","../../img/*.svg":"../img/*.svg"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../quizes_json/carbs.json":"../quizes_json/carbs.json","../index/index.js":"../js/index/index.js","../../img/*.svg":"../img/*.svg"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -650,5 +625,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/quizzes/hxks_qz.js"], null)
-//# sourceMappingURL=/hxks_qz.7125e336.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/quizzes/carbs_qz.js"], null)
+//# sourceMappingURL=/carbs_qz.2c4c811a.js.map
