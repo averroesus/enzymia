@@ -82,7 +82,7 @@ checkBtn.addEventListener('click', function (e) {
       explainBtn.className = `button-explain`;
       explainBtn.id = `${index}`;
       const infoImg = document.createElement('img');
-      infoImg.src = images['info-square'];
+      infoImg.src = images['info-circle'];
 
       //CHILDREN NESTING CREATED ELEMENTS
       explainBtn.appendChild(infoImg);

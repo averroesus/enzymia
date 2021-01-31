@@ -15,9 +15,10 @@ template2.innerHTML = `
         padding: 6px;
         margin-right: 6px;
 
-        border-radius: 2px;
+        border-radius: 5px;
         text-decoration: none;
         color: #020402;
+        font-weight: normal;
         transition: background-color 0.3s;
         background-color: #ededed;
         line-height: 1em;
@@ -55,6 +56,14 @@ class regularBtns extends HTMLElement {
       console.log('no attrb');
     }
 
+    if (this.getAttribute('target')) {
+      this.shadowRoot
+        .querySelector('a')
+        .setAttribute('target', this.getAttribute('target'));
+    } else {
+      console.log('no targer on regular button');
+    }
+
     this.shadowRoot.querySelector('a').innerText = this.getAttribute('name');
 
     // ATTACH READY/NOT-READY CLASS
@@ -81,7 +90,8 @@ template1.innerHTML = `
       height: auto;
       padding: 6px;
 
-      border-radius: 2px;
+      border-radius: 5px;
+      font-weight: normal;
       text-decoration: none;
       color: #020402;
       transition: background-color 0.3s;
@@ -158,12 +168,13 @@ template.innerHTML = `
         align-items: center;
 
         padding: 6px;
-        margin: 0px 0px 0px 0px ;
+        margin: 0px 0px 0px 0px;
 
         color: black;
+        font-weight: normal;
         text-decoration: none;
         background: #ededed;
-        border-radius: 2px;
+        border-radius: 5px;
 
         transition: background 0.3s;
     }

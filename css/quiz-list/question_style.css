@@ -25,9 +25,12 @@ div.question-name-box {
   align-items: flex-start;
 }
 
+/* STYLING BUTTON THAT SHOWS EXPLANATIONS TO QUESTION */
 div.question-name-box img {
-  height: 2em;
-  width: 2em;
+  height: 2.1em;
+  width: 2.1em;
+  padding: 4px;
+  border-radius: 6px;
   transition: background-color 0.3s;
 }
 
@@ -37,12 +40,9 @@ div.question-name-box img:hover {
 }
 
 div.question-name-box button {
-  padding: 0;
-  border: none;
+  border: 0px;
   background: none;
   outline: none;
-  margin-right: 6px;
-  margin-left: 16px;
 }
 
 div.explain-cont p {

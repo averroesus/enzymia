@@ -70,7 +70,7 @@ div.lining {
   flex-flow: row nowrap;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1190px) {
   div.lining {
     flex-flow: column;
   }
