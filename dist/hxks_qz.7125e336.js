@@ -137,7 +137,7 @@ module.exports = [{
     "d2": "глюкоза → Г6Ф"
   },
   "correct": "d2",
-  "explanation": "Г6Ф → Ф6Ф является второй реакцией гликолиза. Ф6Ф → фруктозо-1,6-бисфосфат - третья реакция гликолиза, в ней образуется Ф-1,6-бисФ - изомер Ф6Ф. Фосфоэнолпируват → пируват самая последняя реакция гликолиза, далее цикл трикарбоновых кислот."
+  "explanation": "Г6Ф → Ф6Ф является второй реакцией гликолиза. Ф6Ф → фруктозо-1,6-бисфосфат - третья реакция гликолиза, в ней образуется Ф-1,6-бисФ - изомер Ф6Ф. Фосфоэнолпируват → пируват - самая последняя реакция гликолиза, далее цикл трикарбоновых кислот."
 }, {
   "questionName": "Фермент участвующий в первом этапе распада глюкозы",
   "answers": {
@@ -357,7 +357,7 @@ checkBtn.addEventListener('click', function (e) {
   selectedAnswers.forEach(function (answer) {
     var someSpan = document.createElement('span');
     someSpan.className = 'your-choice';
-    someSpan.textContent = '(ваш выбор)';
+    someSpan.textContent = '(ваш ответ)';
     answer.parentNode.appendChild(someSpan);
   }); //CHECK IF ALL QUESTIONS ARE ANSWERED
 
@@ -474,7 +474,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60473" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52981" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

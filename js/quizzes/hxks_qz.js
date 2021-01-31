@@ -58,7 +58,7 @@ checkBtn.addEventListener('click', function (e) {
   selectedAnswers.forEach((answer) => {
     const someSpan = document.createElement('span');
     someSpan.className = 'your-choice';
-    someSpan.textContent = '(ваш выбор)';
+    someSpan.textContent = '(ваш ответ)';
     answer.parentNode.appendChild(someSpan);
   });
 
