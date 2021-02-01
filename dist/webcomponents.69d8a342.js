@@ -121,10 +121,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 module.exports = "/anki.cbead1c9.svg";
 },{}],"../img/backwards.svg":[function(require,module,exports) {
 module.exports = "/backwards.8ce7e849.svg";
-},{}],"../img/book.svg":[function(require,module,exports) {
-module.exports = "/book.5003d21a.svg";
 },{}],"../img/carbs(formula).svg":[function(require,module,exports) {
 module.exports = "/carbs(formula).f98d93e8.svg";
+},{}],"../img/book.svg":[function(require,module,exports) {
+module.exports = "/book.5003d21a.svg";
 },{}],"../img/dash-circle.svg":[function(require,module,exports) {
 module.exports = "/dash-circle.950090ee.svg";
 },{}],"../img/gear.svg":[function(require,module,exports) {
@@ -133,16 +133,16 @@ module.exports = "/gear.c9d4064d.svg";
 module.exports = "/gluc-fruc-galac.8cac750e.svg";
 },{}],"../img/home.svg":[function(require,module,exports) {
 module.exports = "/home.b3ca861b.svg";
-},{}],"../img/info-circle.svg":[function(require,module,exports) {
-module.exports = "/info-circle.ec235f85.svg";
 },{}],"../img/lighting.svg":[function(require,module,exports) {
 module.exports = "/lighting.59527f10.svg";
+},{}],"../img/info-circle.svg":[function(require,module,exports) {
+module.exports = "/info-circle.ec235f85.svg";
 },{}],"../img/not-ready.svg":[function(require,module,exports) {
 module.exports = "/not-ready.11e783ba.svg";
-},{}],"../img/quiz-checks.svg":[function(require,module,exports) {
-module.exports = "/quiz-checks.4cc838ec.svg";
 },{}],"../img/remeber.svg":[function(require,module,exports) {
 module.exports = "/remeber.4ea59e6b.svg";
+},{}],"../img/quiz-checks.svg":[function(require,module,exports) {
+module.exports = "/quiz-checks.4cc838ec.svg";
 },{}],"../img/table-icon.svg":[function(require,module,exports) {
 module.exports = "/table-icon.f0edfff8.svg";
 },{}],"../img/test-icon.svg":[function(require,module,exports) {
@@ -153,22 +153,22 @@ module.exports = "/youtube.5c108c95.svg";
 module.exports = {
   "anki": require("./anki.svg"),
   "backwards": require("./backwards.svg"),
-  "book": require("./book.svg"),
   "carbs(formula)": require("./carbs(formula).svg"),
+  "book": require("./book.svg"),
   "dash-circle": require("./dash-circle.svg"),
   "gear": require("./gear.svg"),
   "gluc-fruc-galac": require("./gluc-fruc-galac.svg"),
   "home": require("./home.svg"),
-  "info-circle": require("./info-circle.svg"),
   "lighting": require("./lighting.svg"),
+  "info-circle": require("./info-circle.svg"),
   "not-ready": require("./not-ready.svg"),
-  "quiz-checks": require("./quiz-checks.svg"),
   "remeber": require("./remeber.svg"),
+  "quiz-checks": require("./quiz-checks.svg"),
   "table-icon": require("./table-icon.svg"),
   "test-icon": require("./test-icon.svg"),
   "youtube": require("./youtube.svg")
 };
-},{"./anki.svg":"../img/anki.svg","./backwards.svg":"../img/backwards.svg","./book.svg":"../img/book.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./dash-circle.svg":"../img/dash-circle.svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./home.svg":"../img/home.svg","./info-circle.svg":"../img/info-circle.svg","./lighting.svg":"../img/lighting.svg","./not-ready.svg":"../img/not-ready.svg","./quiz-checks.svg":"../img/quiz-checks.svg","./remeber.svg":"../img/remeber.svg","./table-icon.svg":"../img/table-icon.svg","./test-icon.svg":"../img/test-icon.svg","./youtube.svg":"../img/youtube.svg"}],"../js/webcomponents.js":[function(require,module,exports) {
+},{"./anki.svg":"../img/anki.svg","./backwards.svg":"../img/backwards.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./book.svg":"../img/book.svg","./dash-circle.svg":"../img/dash-circle.svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./home.svg":"../img/home.svg","./lighting.svg":"../img/lighting.svg","./info-circle.svg":"../img/info-circle.svg","./not-ready.svg":"../img/not-ready.svg","./remeber.svg":"../img/remeber.svg","./quiz-checks.svg":"../img/quiz-checks.svg","./table-icon.svg":"../img/table-icon.svg","./test-icon.svg":"../img/test-icon.svg","./youtube.svg":"../img/youtube.svg"}],"../js/webcomponents.js":[function(require,module,exports) {
 "use strict";
 
 var _ = _interopRequireDefault(require("../img/*.svg"));
@@ -379,7 +379,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60005" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56582" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
