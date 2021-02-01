@@ -201,7 +201,6 @@ var _enzymes = _interopRequireDefault(require("../../enzymes.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import alertOnOff from './index.js';
 var enzymeBtn = document.querySelector('nav.notes > div.list-item > footer-btns[name]');
 var table = " <table class='enz'> \n                <tr> \n                  <th> \u0424\u0435\u0440\u043C\u0435\u043D\u0442</th>  \n                  <th> \u0424\u0443\u043D\u043A\u0446\u0438\u044F</th>  \n                </tr>";
 
@@ -216,6 +215,14 @@ function functMy() {
 }
 
 enzymeBtn.addEventListener('click', functMy);
+var deckAnkiBtn = document.getElementById('anki-deck');
+var txtAnki = "\n          <p class='info-box-text'>\u041F\u0435\u0440\u0435\u0434 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u043E\u0439 \u043A\u043E\u043B\u043E\u0434\u043A\u0438 ENZANKI, \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u0441\u044F \u0441 <a href='https://alexeygorelov.github.io/anki-manual-ru/#/'>\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u0435\u0439</a> \u043F\u043E \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044E \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043E\u0439 \u0410\u041D\u041A\u0418.</p>\n          <p class='info-box-text'>\n          <br>\n          <a href=\"__/enz.anki.apkg\" donwload>\u0421\u043A\u0430\u0447\u0430\u0442\u044C \u043A\u043E\u043B\u043E\u0434\u0443 ENZANKI</a> </p> <br>\n          ";
+
+function ankiDeckDownload() {
+  (0, _index.alertOnOff)(txtAnki);
+}
+
+deckAnkiBtn.addEventListener('click', ankiDeckDownload);
 },{"./index.js":"../js/index/index.js","../../enzymes.json":"../enzymes.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -244,7 +251,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59209" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60005" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
