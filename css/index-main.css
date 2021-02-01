@@ -2,182 +2,144 @@
 /* ------------------------- */
 
 nav.quiz-list {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: left;
-  }
-  
+  display: flex;
+  flex-flow: column nowrap;
+  padding-right: 6px;
+
+  border-left: 3px solid #dfdfdf;
+  border-right: 3px solid #dfdfdf;
+}
+
 div.list-item {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: left;
+  display: flex;
+  flex-flow: row nowrap;
 
-    /* THIS IS A VERTICAL ALIGN CAUSE FLEX = ROW  */
-    /* align-items: center; */
-
-    margin-bottom: 6px;
-
+  margin-bottom: 6px;
 }
 
-/* MAKING LAST LIST ITEM WITHOUT ANY BORDER */
-
-div.list-item:last-of-type {
-    margin-bottom: 0px;
+nav {
+  padding-left: 6px;
 }
-
-/* ----------------------- */
-
-/* STYLING A LINK ON MAIN PAGE  */
-
-div.list-item a {
-    display: flex;
-    flex: row auto;
-    align-items: center;
-
-    height: auto;
-    padding: 6px;
-    margin-right: 6px;
-
-    border-radius: 2px;
-    text-decoration: none;
-    color: #020402;
-    transition: background-color 0.3s;
-    background-color: #ededed;
-    line-height: 1em;
-}
-
-img {
-    height: 1em;
-    width: 1em;
-}   
-
-/* ----------------------- */
 
 /* MOVE LAST ITEM IN DIV.LIST-ITEM FLEX TO RIGHT */
-
-div.list-item a.quiz  {
-    margin-left: auto; 
-    margin-right: 0;
+little-btn {
+  margin-left: auto;
 }
-
-div.list-item *:hover  {
-    background-color: #fcfcfc;
-    cursor: pointer;
-}
-
-/* ----------------------- */
-
-/* STYLING NOT-READY <A> LIST ITEMS  */
-
-div.list-item a.not-ready {
-    cursor: not-allowed;
-    transition: background-color 0.3s;
-}
-
-div.list-item a.not-ready:hover, 
-a.cal:hover, 
-a.progress:hover {
-    background-color: #F3CFCE;
-}
-
-/* ------------------------ */
-
 
 /* SCREEN SIZE FOR IPHONE */
-
-
 
 /* STYLES FROM JS */
 
 /* STYLING MAIN ALERT DIV BLOCK FOR INNER STRUCTURING  */
 
 div.info-main {
-    position: absolute;
+  position: fixed;
 
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* STYLING A.CAL ONLICK ALERT WINDOW  */
 
 div.hover {
-    position: absolute;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 
-    height: 100%;
-    width: 100%;
-    background-color: rgba(237, 237, 237, 0.7);
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(237, 237, 237, 0.9);
 
-    transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
-/* STYLING A.CAL ONLICK INFO-BOX ALERT WINDOW  */
+h3 {
+  color: #a22c29;
+  /* text-align: center; */
+}
+
+/* INFO-BOX ALERT WINDOW  */
 
 div.info-box {
-    position: absolute;
+  position: absolute;
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 
-    height: auto;
-    width: 50%;
+  height: auto;
+  width: auto;
 
-    margin-top: -20%;
+  border-radius: 6px;
+  border: 2px solid #dbdbdb;
+  padding: 10px;
+  background-color: #ededed;
 
-    border-radius: 4px;
-    border: 2px solid #dbdbdb;
-    padding: 10px;
-    background-color: #ededed;
-
-    transition: background-color 0.1s;
+  transition: background-color 0.1s;
 }
 
 /* STYLING INFO-BOX INNER TEXT P ELEMENT  */
 
 p.info-box-text {
-    font-family: Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 0.8em;
-    letter-spacing: 0.15mm;
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: 0.15mm;
 
-    line-height: 2em;
-    text-align: center;
+  line-height: 1.5em;
+  text-align: center;
 
-    margin: 0;
+  margin: 0;
+}
+
+p.info-box-text a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+
+  padding: 8px;
+
+  background-color: #dfdfdf;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+p.info-box-text a:hover {
+  background-color: #ededed;
 }
 
 /* STYLING INFO-BOX BUTTON ELEMENT  */
 
 button.info-box-button {
-    border: none;
-    margin-top: 16px;
-    border-radius: 2px;
-    padding: 6px;
+  border: none;
+  margin-top: 16px;
+  border-radius: 6px;
+  padding: 6px;
 
-    transition: background-color 0.3s;
-    background-color: #dfdfdf;
+  transition: background-color 0.3s;
+  background-color: #dfdfdf;
 }
 
 button.info-box-button:hover {
-    background-color: rgb(250, 250, 250);
-    cursor: pointer;
+  background-color: rgb(250, 250, 250);
+  cursor: pointer;
 }
 
-
-@media screen and (max-width: 479px) {
-    
-    div.info-box {
-        margin-top: -30%;
-        width: 75%;
-    }
-
+@media screen and (max-width: 950px) {
+  div.info-box {
+    width: 90%;
+  }
 }
+
+/* @media screen and (max-width: 500px) {
+  div.info-box {
+    width: auto;
+  }
+} */

@@ -119,15 +119,28 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"../changelog.json":[function(require,module,exports) {
 module.exports = [{
+  "updateVersion": "Обновление 0.1.2 - ANKI, и лучшие методики для надежного запоминания",
+  "updateItems": {
+    "1": "Добавлен раздел 'Дополнительно' для высоко-продуктивной информации.",
+    "2": "Добавлена колода ENZANKI. Для начала в ней создано 100 карт. Со временем количество будет увеличиваться.",
+    "3": "Добавлена карта 'Обзор метаболических путей'. Пути будут добавляться по мере разбора тем.",
+    "4": "Добавлен раздел 'Заметки' для мало-продуктивной информации.",
+    "5": "Доработан раздел с тестами. Теперь после решения всего теста вы получаете обоснование для каждого вопроса. Просто нажмите 'i' в правом верхнем углу каждого вопроса.",
+    "6": "Добавлен новый урок 'Гексокиназы и глюкокиназы'",
+    "7": "Добавлен тест 'Гекскокиназы и глюкокиназы'. ",
+    "8": "Работы над шрифтом продолжаются.",
+    "9": "Испарвлены ошибки в уроке и в тестах по теме 'Углеводы'. "
+  }
+}, {
   "updateVersion": "Обновление 0.1.1",
   "updateItems": {
-    "1": "Игра слов. Изменено название сайта на [Enzemia]*.",
+    "1": "Игра слов. Изменено название сайта на [Enzemia / Enzymia]*.",
     "2": "Выравнивание границ. Это не бросается в глаза, но сечйас сайт отцентрован",
     "3": "Обновление интерфейса",
     "4": "Все начинается на главной странице. Перейти на главную страницу можно нажав на название сайта в заголовке.",
     "5": "Надоедливые всплывающие окна. Добавлены окна с уведомлениями. ",
-    "6": "Читатебльность - это важно. Изменен шрифт.",
-    "7": "Маленькие шаги - большие цели [Анаболизм]. Добавлени раздел с историей обновлений. "
+    "6": "Читабельность - это важно. Изменен шрифт.",
+    "7": "Маленькие шаги - большие цели [Анаболизм]. Добавлен раздел с историей обновлений. "
   }
 }];
 },{}],"../js/changelog/updates.js":[function(require,module,exports) {
@@ -140,16 +153,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // GET HTML ELEMENTS
 var main = document.querySelector('main');
 var div = document.querySelector('.changelog');
-console.log(div);
+console.log(_changelog.default);
+var output = '';
 
 _changelog.default.forEach(function (item, index) {
   // CREATING STRING FOR ADDING
-  var output = ''; // DEFINING ARRAY ELEMENTS
-
+  // DEFINING ARRAY ELEMENTS
   var updateVersion = item.updateVersion;
   var updateItems = item.updateItems; // APPEND UPDATE VERSION TO OUTPUT
 
-  output = "<ul class='update-version'>\n                <li> ".concat(updateVersion, " </li>\n                  <ul class='update-item'>\n              ");
+  output += "<ul class='update-version'>\n                <li> ".concat(updateVersion, " </li>\n                  <ul class='update-item'>\n              ");
 
   for (var _item in updateItems) {
     output += "<li> ".concat(updateItems[_item], " </li>");
@@ -187,7 +200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62046" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56582" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

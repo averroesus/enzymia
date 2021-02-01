@@ -1,24 +1,30 @@
-
 div.changelog {
-    line-height: 2em;
+  line-height: 2em;
 }
 
 ul.update-version {
-    font-weight: 700;
+  font-weight: 700;
 }
 
-ul.update-item {
-    font-weight: 300;
+ul.update-item li {
+  font-weight: 500;
 }
 
 @media screen and (max-width: 400px) {
-    ul.update-version {
-        padding-left: 16px;  
-    }
+  header {
+    font-size: 16px;
+  }
+  body {
+    font-size: 16px;
+  }
+  ul.update-version {
+    padding-left: 16px;
+  }
 
-    ul.update-item {
-        padding-left: 8px;
-    }
+  ul.update-item {
+    padding-left: 8px;
+  }
 }
+
 
 /*# sourceMappingURL=/chagelog-main.a783fb96.css.map */

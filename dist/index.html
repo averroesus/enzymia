@@ -6,86 +6,118 @@
     <link rel="stylesheet" text="text/css" href="/index-main.04448b54.css">
     <link rel="stylesheet" text="text/css" href="/index-body.cc3bc02c.css">
     <link rel="stylesheet" text="text/css" href="/footer.7327b172.css">
-    <link rel="stylesheet" text="text/css" href="/index-only.a025a1a1.css">
-    
+    <link rel="stylesheet" text="text/css" href="/enz-table.b8198b40.css">
+
     <!-- REFERRING TO GOOGLE FONTS  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+
+    <style>@media screen and (max-width: 400px) {
+        main {
+          margin: 0px;
+        }
+      }</style>
 
     <title>Enzymia</title>
-  <script src="/index-main.04448b54.js"></script><script src="/index-body.cc3bc02c.js"></script><script src="/footer.7327b172.js"></script><script src="/index-only.a025a1a1.js"></script></head>
+  <script src="/index-main.04448b54.js"></script><script src="/index-body.cc3bc02c.js"></script><script src="/footer.7327b172.js"></script><script src="/enz-table.b8198b40.js"></script><script src="/carbs_ls.js"></script></head>
 
   <body>
     <header>
-      <div> <a class="home" href="/index.html"> <span id="red">ENZ</span>YMIA </a> </div>
+      <div>
+        <a class="home" href="/index.html"> ENZYM<span id="red">IA</span> </a>
+      </div>
     </header>
 
     <!-- <div class="menu"> SOME INFO HERE </div> -->
 
     <main>
+      <div class="lining">
+        <nav class="perks">
+          <h3>ДОПОЛНИТЕЛЬНО</h3>
+          <div class="list-item">
+            <regular-btn name="ОБЗОР МЕТАБОЛИЧЕСКИХ ПУТЕЙ" link="__/img/pdfs/BioChemPathways.pdf" target="_blank"></regular-btn>
+            <a href="/__/img/pdfs/BioChemPathways.pdf" target="_blank" alt="pathways"></a>
+          </div>
+          <div class="list-item">
+            <footer-btns name="КОЛОДА АНКИ (версия 0.1)" image="anki" id="anki-deck"></footer-btns>
+            <a href="/__/enz.anki.apkg" donwload=""></a>
+          </div>
+        </nav>
 
-      <nav class="quiz-list">
+        <nav class="quiz-list">
+          <h3>МЕТАБОЛИЗМ УГЛЕВОДОВ</h3>
+          <div class="list-item">
+            <regular-btn name="УГЛЕВОДЫ" link="./lessons/carbs_ls.html">
+            </regular-btn>
+            <a href="/lessons/carbs_ls.html"></a>
+            <little-btn image="quiz-checks" link="./quizzes/carbs_qz.html">
+            </little-btn>
+            <a href="/quizzes/carbs_qz.html"></a>
+          </div>
 
-        <div class="list-item">
-          <a class="lesson-name" href="/lessons/carbs_ls.html"> УГЛЕВОДЫ </a>
-          <a class="quiz" href="/quizzes/carbs_qz.html"> <img class="test" src="/test_icon.b8ca70a2.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item">
+            <regular-btn name="ГЕКСО & ГЛЮКОКИНАЗЫ" link="./lessons/hexokinases.html">
+            </regular-btn>
+            <a href="/lessons/hexokinases.html"></a>
+            <little-btn image="quiz-checks" link="./quizzes/hxks_qz.html">
+            </little-btn>
+            <a href="/quizzes/hxks_qz.html"></a>
+          </div>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ГЕКСО & ГЛЮКОКИНАЗЫ </a> 
-          <a class="quiz cal" href="#"> <img class="cal" src="/calendar-plus.5d07b24e.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-          <!-- <button class="date-info"> <img src="../img/calendar-plus.svg" alt="КАЛЕНДАРЬ" class="cal"> </button> -->
-        </div>
+          <div class="list-item">
+            <regular-btn name="ГЛИКОЛИЗ" link="#"> </regular-btn>
+            <little-btn image="dash-circle" link="#"> </little-btn>
+          </div>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ГЛИКОЛИЗ </a>
-          <a class="quiz progress" href="#"> <img class="gear" src="/gear.c9d4064d.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item">
+            <regular-btn name="ГЛИКОНЕОГЕНЕЗ" link="#"> </regular-btn>
+            <little-btn image="dash-circle" link="#"> </little-btn>
+          </div>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ГЛИКОНЕОГЕНЕЗ </a>
-          <a class="quiz progress" href="#"> <img class="gear" src="/gear.c9d4064d.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item not-ready">
+            <regular-btn name="ГЛИКОГЕН" link="#"> </regular-btn>
+            <little-btn image="dash-circle" link="#"> </little-btn>
+          </div>
 
-        <div class="list-item not-ready">
-          <a class="not-ready" href="#"> ГЛИКОГЕН </a>
-          <a class="quiz progress" href="#"> <img class="gear" src="/gear.c9d4064d.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item">
+            <regular-btn name="ПЕНТОЗО-ФОСФАТНЫЙ ПУТЬ" link="#"> </regular-btn>
+            <little-btn image="dash-circle" link="#"> </little-btn>
+          </div>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ПЕНТОЗО-ФОСФАТНЫЙ ПУТЬ </a>
-          <a class="quiz progress" href="#"> <img class="gear" src="/gear.c9d4064d.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
+          <div class="list-item">
+            <regular-btn name="ФРУКТОЗА И ГАЛАКТОЗА" link="#"> </regular-btn>
+            <little-btn image="dash-circle" link="#"> </little-btn>
+          </div>
+        </nav>
 
-        <div class="list-item">
-          <a class="not-ready" href="#"> ФРУКТОЗА И ГАЛАКТОЗА </a>
-          <a class="quiz progress" href="#"> <img class="gear" src="/gear.c9d4064d.svg" alt="ПРОВЕРИТЬ СЕБЯ"> </a>
-        </div>
-        
-      </nav>
-
+        <nav class="notes">
+          <h3>ЗАМЕТКИ</h3>
+          <div class="list-item">
+            <footer-btns image="table-icon" name="КЛАССИФИКАЦИЯ ФЕРМЕНТОВ"></footer-btns>
+          </div>
+          <div class="list-item">
+            <footer-btns name="УРАВНЕНИЕ МИХАЭЛИСА-МЕНТЕН" image="youtube" link="https://www.youtube.com/watch?v=Lgefl_z_2U0" target="_blank"></footer-btns>
+          </div>
+        </nav>
+      </div>
     </main>
 
     <footer>
+      <footer-btns name="Enzemia" image="home" link="./index.html">
+      </footer-btns>
+      <a href="/index.html"></a>
 
-      <a href="/index.html" class="home-footer link-footer"> 
-        <p> Enzemia </p>
-        <img class="changelog" src="/house.e50cb985.svg" alt="Домой">
-      </a>
-
-      <a href="/changelog.html" class="changelog link-footer"> 
-        <p> Анаболизм </p>
-        <img class="changelog" src="/lightning.575941a7.svg" alt="Обновления">
-      </a>
-
+      <footer-btns name="Анаболизм" image="lighting" link="./changelog.html">
+      </footer-btns>
+      <a href="/changelog.html"></a>
     </footer>
 
-    <aside class="apprec">
-
-      <p> Спасибо edition.13th и AVERROESUS</p>
-
+    <aside class="index">
+      <p>Спасибо edition.13th и AVERROESUS</p>
     </aside>
     <!-- SCRIPTS HERE  -->
     <script type="module" src="/index.e2f0ce50.js"></script>
+    <script type="module" src="/webcomponents.69d8a342.js"></script>
+    <script type="module" src="/table.18121338.js"></script>
   </body>
 </html>

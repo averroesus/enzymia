@@ -3,14 +3,17 @@ body {
 }
 
 header {
-  background-color: #EDEDE8;
+  background-color: #edede8;
   border-bottom: 4px solid #a22c29;
   font-family: sans-serif;
   font-weight: 900;
 }
 
+div.question-name {
+  font-weight: 2em;
+}
 h2 {
-  font-size: 1.4em;
+  font-size: 2em;
   font-weight: 900;
   text-align: center;
   /* border: 1px dashed black; */
@@ -20,7 +23,7 @@ header > button.svg-quiz-material {
   border: none;
   border-radius: 4px;
   margin-left: 3px;
-  margin-top: px;
+  /* margin-top: px; */
   font-size: 1em;
 }
 

@@ -1,0 +1,26 @@
+table,
+th,
+td {
+  font-family: Helvetica, sans-serif;
+  font-size: large;
+  border-collapse: collapse;
+  border: 3px solid #dfdfdf;
+  padding: 10px;
+  line-height: 1.3em;
+}
+
+td {
+  vertical-align: text-top;
+}
+
+@media screen and (max-width: 480px) {
+  table,
+  th,
+  td {
+    font-size: small;
+    border-collapse: collapse;
+    border: 3px solid #dfdfdf;
+    padding: 4px;
+    line-height: 1.3em;
+  }
+}

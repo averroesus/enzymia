@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="refresh" content="" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="../../css/index-body.css">
+  <link rel="stylesheet" text="text/css" href="../../css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/quiz-list/layout.css">
+	<link rel="stylesheet" type="text/css" href="../../css/quiz-list/question_style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/quiz-list/header-styling.css">
+	
+	<!-- GOOGLE FONTS REF  -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+	<style>
+		@media screen and (max-width: 515px) {
+			div.question-name {
+				display: flex;
+				flex-flow: column wrap;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#title-lesson {
+				margin-top: 10px;
+			}
+			#title {
+				display: none;
+				background-color: aqua;
+			}
+		}
+	</style>
+	
+	<title> Enzymia | ГЛК & ГКК </title>
+</head>
+
+<body>
+	<header>
+		<div class="question-name"> 
+			<a class="home" href="../index.html"> 
+				ENZYM<span id='red'>IA</span> 
+			</a> 
+				<span id='title'>|</span> 
+				<span id='title-lesson'>ГЛК & ГКК</span>
+		</div>
+	</header>
+
+	<main>
+		<form action="submit"></form>
+			<div class="quiz-buttons-cont">
+				<button type="button" class="restart-quiz">ПОВТОРИТЬ</button>
+				<button type="submit" class="submit-quiz">ПРОВЕРИТЬ</button>
+			</div>
+		</form>
+	</main>
+
+	<footer>
+		<footer-btns name="Enzemia" image="home" link="../index.html"> </footer-btns>
+		<footer-btns name="ГЛК&ГКК" image="book" link="../lessons/hexokinases.html"> </footer-btns>
+	</footer>
+
+	<aside class="apprec">
+		<p> Спасибо edition.13th и AVERROESUS</p>
+	</aside>
+
+	<script type="module" src="../../js/quizzes/hxks_qz.js"></script>
+	<script type="module" src="../../js/webcomponents.js"></script>
+</body>
+</html>
+
+
+<!-- PUSHED ON GITHUB AT SEP. 5TH 2020, AT 10:17AM, MOSCOW  -->
