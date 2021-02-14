@@ -119,6 +119,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"../changelog.json":[function(require,module,exports) {
 module.exports = [{
+  "updateVersion": "Обновление 0.1.3",
+  "updateItems": {
+    "1": "Исправлены ошибки"
+  }
+}, {
   "updateVersion": "Обновление 0.1.2 - ANKI, и лучшие методики для надежного запоминания",
   "updateItems": {
     "1": "Добавлен раздел 'Дополнительно' для высоко-продуктивной информации.",
@@ -129,7 +134,7 @@ module.exports = [{
     "6": "Добавлен новый урок 'Гексокиназы и глюкокиназы'",
     "7": "Добавлен тест 'Гекскокиназы и глюкокиназы'. ",
     "8": "Работы над шрифтом продолжаются.",
-    "9": "Испарвлены ошибки в уроке и в тестах по теме 'Углеводы'. "
+    "9": "Исправлены ошибки в уроке и в тестах по теме 'Углеводы'. "
   }
 }, {
   "updateVersion": "Обновление 0.1.1",
@@ -200,7 +205,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56582" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56418" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

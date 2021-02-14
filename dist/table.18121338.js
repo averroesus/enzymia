@@ -181,7 +181,7 @@ module.exports = [{
   "function": "Осуществляют отщепление фосфатной группы от субстрата."
 }, {
   "enzyme": "Дегидрогеназы",
-  "function": "Катализируют окислительно-восстановительные реакции (ОРВ)."
+  "function": "Катализируют окислительно-восстановительные реакции (ОВР)."
 }, {
   "enzyme": "Гидроксилазы",
   "function": "Прикрепляют гидроксильную группу к субстрату."
@@ -216,7 +216,7 @@ function functMy() {
 
 enzymeBtn.addEventListener('click', functMy);
 var deckAnkiBtn = document.getElementById('anki-deck');
-var txtAnki = "\n          <p class='info-box-text'>\u041F\u0435\u0440\u0435\u0434 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u043E\u0439 \u043A\u043E\u043B\u043E\u0434\u043A\u0438 ENZANKI, \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u0441\u044F \u0441 <a href='https://alexeygorelov.github.io/anki-manual-ru/#/'>\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u0435\u0439</a> \u043F\u043E \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044E \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043E\u0439 \u0410\u041D\u041A\u0418.</p>\n          <p class='info-box-text'>\n          <br>\n          <a href=\"__/enz.anki.apkg\" donwload>\u0421\u043A\u0430\u0447\u0430\u0442\u044C \u043A\u043E\u043B\u043E\u0434\u0443 ENZANKI</a> </p> <br>\n          ";
+var txtAnki = "\n          <p class='info-box-text'>\u041F\u0435\u0440\u0435\u0434 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u043E\u0439 \u043A\u043E\u043B\u043E\u0434\u044B ENZANKI, \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u0441\u044F \u0441 <a href='https://alexeygorelov.github.io/anki-manual-ru/#/'>\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u0435\u0439</a> \u043F\u043E \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044E \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043E\u0439 \u0410\u041D\u041A\u0418.</p>\n          <p class='info-box-text'>\n          <br>\n          <a href=\"__/enz.anki.apkg\" donwload>\u0421\u043A\u0430\u0447\u0430\u0442\u044C \u043A\u043E\u043B\u043E\u0434\u0443 ENZANKI</a> </p> <br>\n          ";
 
 function ankiDeckDownload() {
   (0, _index.alertOnOff)(txtAnki);
@@ -251,7 +251,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56582" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56418" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -168,7 +168,7 @@ template.innerHTML = `
         align-items: center;
 
         padding: 6px;
-        margin: 0px 0px 0px 0px;
+        margin-right: 6px;
 
         color: black;
         font-weight: normal;
@@ -193,10 +193,6 @@ template.innerHTML = `
         margin: 0 0 0 8px;
         width: 1em;
         height: 1em;
-    }
-
-    a {
-        margin-right: 6px;
     }
   </style>
   <a>

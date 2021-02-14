@@ -117,58 +117,58 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../img/anki.svg":[function(require,module,exports) {
-module.exports = "/anki.cbead1c9.svg";
-},{}],"../img/backwards.svg":[function(require,module,exports) {
-module.exports = "/backwards.8ce7e849.svg";
+})({"../img/book.svg":[function(require,module,exports) {
+module.exports = "/book.5003d21a.svg";
 },{}],"../img/carbs(formula).svg":[function(require,module,exports) {
 module.exports = "/carbs(formula).f98d93e8.svg";
-},{}],"../img/book.svg":[function(require,module,exports) {
-module.exports = "/book.5003d21a.svg";
 },{}],"../img/dash-circle.svg":[function(require,module,exports) {
 module.exports = "/dash-circle.950090ee.svg";
+},{}],"../img/backwards.svg":[function(require,module,exports) {
+module.exports = "/backwards.8ce7e849.svg";
 },{}],"../img/gear.svg":[function(require,module,exports) {
 module.exports = "/gear.c9d4064d.svg";
 },{}],"../img/gluc-fruc-galac.svg":[function(require,module,exports) {
 module.exports = "/gluc-fruc-galac.8cac750e.svg";
+},{}],"../img/info-circle.svg":[function(require,module,exports) {
+module.exports = "/info-circle.ec235f85.svg";
 },{}],"../img/home.svg":[function(require,module,exports) {
 module.exports = "/home.b3ca861b.svg";
 },{}],"../img/lighting.svg":[function(require,module,exports) {
 module.exports = "/lighting.59527f10.svg";
-},{}],"../img/info-circle.svg":[function(require,module,exports) {
-module.exports = "/info-circle.ec235f85.svg";
 },{}],"../img/not-ready.svg":[function(require,module,exports) {
 module.exports = "/not-ready.11e783ba.svg";
-},{}],"../img/remeber.svg":[function(require,module,exports) {
-module.exports = "/remeber.4ea59e6b.svg";
 },{}],"../img/quiz-checks.svg":[function(require,module,exports) {
 module.exports = "/quiz-checks.4cc838ec.svg";
+},{}],"../img/remeber.svg":[function(require,module,exports) {
+module.exports = "/remeber.4ea59e6b.svg";
 },{}],"../img/table-icon.svg":[function(require,module,exports) {
 module.exports = "/table-icon.f0edfff8.svg";
 },{}],"../img/test-icon.svg":[function(require,module,exports) {
 module.exports = "/test-icon.cf03bd00.svg";
 },{}],"../img/youtube.svg":[function(require,module,exports) {
 module.exports = "/youtube.5c108c95.svg";
+},{}],"../img/anki.svg":[function(require,module,exports) {
+module.exports = "/anki.cbead1c9.svg";
 },{}],"../img/*.svg":[function(require,module,exports) {
 module.exports = {
-  "anki": require("./anki.svg"),
-  "backwards": require("./backwards.svg"),
-  "carbs(formula)": require("./carbs(formula).svg"),
   "book": require("./book.svg"),
+  "carbs(formula)": require("./carbs(formula).svg"),
   "dash-circle": require("./dash-circle.svg"),
+  "backwards": require("./backwards.svg"),
   "gear": require("./gear.svg"),
   "gluc-fruc-galac": require("./gluc-fruc-galac.svg"),
+  "info-circle": require("./info-circle.svg"),
   "home": require("./home.svg"),
   "lighting": require("./lighting.svg"),
-  "info-circle": require("./info-circle.svg"),
   "not-ready": require("./not-ready.svg"),
-  "remeber": require("./remeber.svg"),
   "quiz-checks": require("./quiz-checks.svg"),
+  "remeber": require("./remeber.svg"),
   "table-icon": require("./table-icon.svg"),
   "test-icon": require("./test-icon.svg"),
-  "youtube": require("./youtube.svg")
+  "youtube": require("./youtube.svg"),
+  "anki": require("./anki.svg")
 };
-},{"./anki.svg":"../img/anki.svg","./backwards.svg":"../img/backwards.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./book.svg":"../img/book.svg","./dash-circle.svg":"../img/dash-circle.svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./home.svg":"../img/home.svg","./lighting.svg":"../img/lighting.svg","./info-circle.svg":"../img/info-circle.svg","./not-ready.svg":"../img/not-ready.svg","./remeber.svg":"../img/remeber.svg","./quiz-checks.svg":"../img/quiz-checks.svg","./table-icon.svg":"../img/table-icon.svg","./test-icon.svg":"../img/test-icon.svg","./youtube.svg":"../img/youtube.svg"}],"../js/webcomponents.js":[function(require,module,exports) {
+},{"./book.svg":"../img/book.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./dash-circle.svg":"../img/dash-circle.svg","./backwards.svg":"../img/backwards.svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./info-circle.svg":"../img/info-circle.svg","./home.svg":"../img/home.svg","./lighting.svg":"../img/lighting.svg","./not-ready.svg":"../img/not-ready.svg","./quiz-checks.svg":"../img/quiz-checks.svg","./remeber.svg":"../img/remeber.svg","./table-icon.svg":"../img/table-icon.svg","./test-icon.svg":"../img/test-icon.svg","./youtube.svg":"../img/youtube.svg","./anki.svg":"../img/anki.svg"}],"../js/webcomponents.js":[function(require,module,exports) {
 "use strict";
 
 var _ = _interopRequireDefault(require("../img/*.svg"));
@@ -299,7 +299,7 @@ window.customElements.define('little-btn', littleBtns); // FOOTER WEB COMPONENTS
 // FOOTER-BTNS
 
 var template = document.createElement('template');
-template.innerHTML = "\n  <style>\n    a {\n        display: flex;\n        flex-flow: row nowrap;\n        align-items: center;\n\n        padding: 6px;\n        margin: 0px 0px 0px 0px;\n\n        color: black;\n        font-weight: normal;\n        text-decoration: none;\n        background: #ededed;\n        border-radius: 5px;\n\n        transition: background 0.3s;\n    }\n\n    a:hover {\n        background: #fcfcfc;\n        cursor: pointer;\n    }\n\n    a p {\n        margin: 0;\n        text-indent: 0;\n    }\n\n    a img {\n        margin: 0 0 0 8px;\n        width: 1em;\n        height: 1em;\n    }\n\n    a {\n        margin-right: 6px;\n    }\n  </style>\n  <a>\n    <p></p>\n    <img />\n\n  </a>\n";
+template.innerHTML = "\n  <style>\n    a {\n        display: flex;\n        flex-flow: row nowrap;\n        align-items: center;\n\n        padding: 6px;\n        margin-right: 6px;\n\n        color: black;\n        font-weight: normal;\n        text-decoration: none;\n        background: #ededed;\n        border-radius: 5px;\n\n        transition: background 0.3s;\n    }\n\n    a:hover {\n        background: #fcfcfc;\n        cursor: pointer;\n    }\n\n    a p {\n        margin: 0;\n        text-indent: 0;\n    }\n\n    a img {\n        margin: 0 0 0 8px;\n        width: 1em;\n        height: 1em;\n    }\n  </style>\n  <a>\n    <p></p>\n    <img />\n\n  </a>\n";
 
 var footerBtn = /*#__PURE__*/function (_HTMLElement3) {
   _inherits(footerBtn, _HTMLElement3);
@@ -379,7 +379,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56582" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56418" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

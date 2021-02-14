@@ -109,7 +109,7 @@ table.lesson-table tr:nth-child(even) {
 
 table.lesson-table tr:nth-child(1) td {
   font-size: inherit;
-  font-family: Arial Black;
+  font-family: Arial;
   font-weight: bold;
   text-align: center;
   padding: 10px;

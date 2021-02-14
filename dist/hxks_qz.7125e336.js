@@ -147,7 +147,7 @@ module.exports = [{
     "d3": "глюкокиназа"
   },
   "correct": "d3",
-  "explanation": "Лактат дегидрогеназа перенаправляет метаболизм пирувата (последнее образование гликолиза) в сторону синтеза молочной килсоты (лактата). Фосфофруктокиназа катализирует реакцию Ф6Ф → фруктозо-1,6-бисфосфат - третья реакция гликолиза. Пируват дегидрогенеза перенаправляет метаболизм пирувата в сторону цикла трикарбоновых кислот (цикл Кребса)."
+  "explanation": "Лактат дегидрогеназа перенаправляет метаболизм пирувата (последнее образование гликолиза) в сторону синтеза молочной кислоты (лактата). Фосфофруктокиназа катализирует реакцию Ф6Ф → фруктозо-1,6-бисфосфат - третья реакция гликолиза. Пируват дегидрогеназа перенаправляет метаболизм пирувата в сторону цикла трикарбоновых кислот (цикл Кребса)."
 }, {
   "questionName": "Какой из ферментов присутствует в большинстве тканей?",
   "answers": {
@@ -155,7 +155,7 @@ module.exports = [{
     "b4": "ГКК"
   },
   "correct": "b4",
-  "explanation": "Глюкокиназа в основном представлена в печени и ПЖЖ. Также она присутствует в мышцах. Гексокиназа, обладающая высоким сродством с глюкозой, (вследствие выского Km), присутствует в большинстве глюкозозависимых тканей: головной мозг, красные кровянные клетки."
+  "explanation": "Глюкокиназа в основном представлена в печени и ПЖЖ. Также она присутствует в мышцах. Гексокиназа, обладающая высоким сродством с глюкозой, (вследствие низкого Km), присутствует в большинстве глюкозозависимых тканей: головной мозг, красные кровянные клетки."
 }, {
   "questionName": "Какой фермент способен метаболизировать большее количество глюкозы за единицу времени при максимальной концентрации (Vmax)?",
   "answers": {
@@ -171,7 +171,7 @@ module.exports = [{
     "b6": "ГЛК"
   },
   "correct": "a6",
-  "explanation": "Глюкокиназа обладет высоким сродством с глюкозой, т.е. высокий Km. Оба этих ферментов подчиняются уравнению Михаэлиса-Ментен. Изучите его для понимания данного концепта."
+  "explanation": "Гексокиназа обладет высоким сродством с глюкозой, т.е. низкий Km обеспечивает быстрое связывание с субстратом. Эти ферменты [ГЛК & ГКК] подчиняются уравнению Михаэлиса-Ментен. Изучите его для понимания данного концепта."
 }, {
   "questionName": "В организме глюкоза хранится в форме",
   "answers": {
@@ -191,7 +191,7 @@ module.exports = [{
     "d8": "головной мозг"
   },
   "correct": "c8",
-  "explanation": "Лактат дегидрогеназа перенаправляет метаболизм пирувата (последнее образование гликолиза) в сторону синтеза молочной килсоты (лактата). Фосфофруктокиназа катализирует реакцию Ф6Ф → фруктозо-1,6-бисфосфат - третья реакция гликолиза. Пируват дегидрогенеза перенаправляет метаболизм пирувата в сторону цикла трикарбоновых кислот (цикл Кребса)."
+  "explanation": "В нашем оргнизме гликоген (в случае избытка глюкозы) начинает накапливаться в мышцах, но основным его депо является печень. Красные клетки крови и головной мозг не хранят глюкозу; имеющуюся глюкозу они используют сразу для обеспечения своих нужд. Жиры хранятся в форме триглицеридов."
 }, {
   "questionName": "Ингибитором ГЛК является",
   "answers": {
@@ -201,7 +201,7 @@ module.exports = [{
     "d9": "фруктозо-1,6-бисфосфат"
   },
   "correct": "b9",
-  "explanation": "В качестве ингибиторов активности тех или иных ферментов выступают органические соединения , НО в качестве ингибиторов синтеза орагинческих соединений могут выступают и ферменты, и другие другие орагнические соединения. Соединения способные тормозить синтез пирувата и Ф-1,6-бисФ будут рассматриваться на следующем уроке. Здесь стоит отметить, что из рис.1 данного урока следует, что ингибитором фермента ГЛК является накопление Ф6Ф в цитоплазме клетки. Высокая коцентрация Г6Ф обосновывает торможение гексокинзы."
+  "explanation": "В качестве ингибиторов активности тех или иных ферментов выступают органические соединения, НО в качестве ингибиторов синтеза оргаинческих соединений могут выступают и ферменты, и другие другие орагнические соединения. Соединения способные тормозить синтез пирувата и Ф-1,6-бисФ будут рассматриваться на следующем уроке. Здесь стоит отметить, что из рис.1 данного урока следует, что ингибитором фермента ГЛК является накопление Ф6Ф в цитоплазме клетки. Высокая коцентрация Г6Ф обосновывает торможение гексокинзы."
 }, {
   "questionName": "Хроническая гемолитическая анемия - патология, ассоциированная с",
   "answers": {
@@ -209,7 +209,7 @@ module.exports = [{
     "b10": "ГЛК"
   },
   "correct": "a10",
-  "explanation": "Отличительной характеристикой патологий ГКК и ГЛК является то, что при патологиях ГЛК, коцентрация глюкозы в крови возрастает значительно. Нежели чем при патология ГКК. Стоит отметить что глюкоза является единственным источником энергии для клеток крови."
+  "explanation": "Отличительной характеристикой патологий ГКК и ГЛК является то, что при патологиях ГЛК, коцентрация глюкозы в крови возрастает значительно. Нежели чем при патологиях ГКК. Стоит отметить что глюкоза является единственным источником энергии для клеток крови."
 }, {
   "questionName": "Патологии, ассоциированные с ГЛК будут приводить к",
   "answers": {
@@ -272,58 +272,58 @@ function alertOnOff(txt) {
 
 var _default = alertOnOff;
 exports.default = _default;
-},{}],"../img/anki.svg":[function(require,module,exports) {
-module.exports = "/anki.cbead1c9.svg";
-},{}],"../img/backwards.svg":[function(require,module,exports) {
-module.exports = "/backwards.8ce7e849.svg";
-},{}],"../img/carbs(formula).svg":[function(require,module,exports) {
-module.exports = "/carbs(formula).f98d93e8.svg";
 },{}],"../img/book.svg":[function(require,module,exports) {
 module.exports = "/book.5003d21a.svg";
+},{}],"../img/carbs(formula).svg":[function(require,module,exports) {
+module.exports = "/carbs(formula).f98d93e8.svg";
 },{}],"../img/dash-circle.svg":[function(require,module,exports) {
 module.exports = "/dash-circle.950090ee.svg";
+},{}],"../img/backwards.svg":[function(require,module,exports) {
+module.exports = "/backwards.8ce7e849.svg";
 },{}],"../img/gear.svg":[function(require,module,exports) {
 module.exports = "/gear.c9d4064d.svg";
 },{}],"../img/gluc-fruc-galac.svg":[function(require,module,exports) {
 module.exports = "/gluc-fruc-galac.8cac750e.svg";
+},{}],"../img/info-circle.svg":[function(require,module,exports) {
+module.exports = "/info-circle.ec235f85.svg";
 },{}],"../img/home.svg":[function(require,module,exports) {
 module.exports = "/home.b3ca861b.svg";
 },{}],"../img/lighting.svg":[function(require,module,exports) {
 module.exports = "/lighting.59527f10.svg";
-},{}],"../img/info-circle.svg":[function(require,module,exports) {
-module.exports = "/info-circle.ec235f85.svg";
 },{}],"../img/not-ready.svg":[function(require,module,exports) {
 module.exports = "/not-ready.11e783ba.svg";
-},{}],"../img/remeber.svg":[function(require,module,exports) {
-module.exports = "/remeber.4ea59e6b.svg";
 },{}],"../img/quiz-checks.svg":[function(require,module,exports) {
 module.exports = "/quiz-checks.4cc838ec.svg";
+},{}],"../img/remeber.svg":[function(require,module,exports) {
+module.exports = "/remeber.4ea59e6b.svg";
 },{}],"../img/table-icon.svg":[function(require,module,exports) {
 module.exports = "/table-icon.f0edfff8.svg";
 },{}],"../img/test-icon.svg":[function(require,module,exports) {
 module.exports = "/test-icon.cf03bd00.svg";
 },{}],"../img/youtube.svg":[function(require,module,exports) {
 module.exports = "/youtube.5c108c95.svg";
+},{}],"../img/anki.svg":[function(require,module,exports) {
+module.exports = "/anki.cbead1c9.svg";
 },{}],"../img/*.svg":[function(require,module,exports) {
 module.exports = {
-  "anki": require("./anki.svg"),
-  "backwards": require("./backwards.svg"),
-  "carbs(formula)": require("./carbs(formula).svg"),
   "book": require("./book.svg"),
+  "carbs(formula)": require("./carbs(formula).svg"),
   "dash-circle": require("./dash-circle.svg"),
+  "backwards": require("./backwards.svg"),
   "gear": require("./gear.svg"),
   "gluc-fruc-galac": require("./gluc-fruc-galac.svg"),
+  "info-circle": require("./info-circle.svg"),
   "home": require("./home.svg"),
   "lighting": require("./lighting.svg"),
-  "info-circle": require("./info-circle.svg"),
   "not-ready": require("./not-ready.svg"),
-  "remeber": require("./remeber.svg"),
   "quiz-checks": require("./quiz-checks.svg"),
+  "remeber": require("./remeber.svg"),
   "table-icon": require("./table-icon.svg"),
   "test-icon": require("./test-icon.svg"),
-  "youtube": require("./youtube.svg")
+  "youtube": require("./youtube.svg"),
+  "anki": require("./anki.svg")
 };
-},{"./anki.svg":"../img/anki.svg","./backwards.svg":"../img/backwards.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./book.svg":"../img/book.svg","./dash-circle.svg":"../img/dash-circle.svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./home.svg":"../img/home.svg","./lighting.svg":"../img/lighting.svg","./info-circle.svg":"../img/info-circle.svg","./not-ready.svg":"../img/not-ready.svg","./remeber.svg":"../img/remeber.svg","./quiz-checks.svg":"../img/quiz-checks.svg","./table-icon.svg":"../img/table-icon.svg","./test-icon.svg":"../img/test-icon.svg","./youtube.svg":"../img/youtube.svg"}],"../js/quizzes/hxks_qz.js":[function(require,module,exports) {
+},{"./book.svg":"../img/book.svg","./carbs(formula).svg":"../img/carbs(formula).svg","./dash-circle.svg":"../img/dash-circle.svg","./backwards.svg":"../img/backwards.svg","./gear.svg":"../img/gear.svg","./gluc-fruc-galac.svg":"../img/gluc-fruc-galac.svg","./info-circle.svg":"../img/info-circle.svg","./home.svg":"../img/home.svg","./lighting.svg":"../img/lighting.svg","./not-ready.svg":"../img/not-ready.svg","./quiz-checks.svg":"../img/quiz-checks.svg","./remeber.svg":"../img/remeber.svg","./table-icon.svg":"../img/table-icon.svg","./test-icon.svg":"../img/test-icon.svg","./youtube.svg":"../img/youtube.svg","./anki.svg":"../img/anki.svg"}],"../js/quizzes/hxks_qz.js":[function(require,module,exports) {
 "use strict";
 
 var _hxks = _interopRequireDefault(require("../../quizes_json/hxks.json"));
@@ -365,93 +365,85 @@ checkBtn.addEventListener('click', function (e) {
   var countTrue = 0;
   var countFalse = 0;
   var availableAnswers = document.querySelectorAll('div.question-box');
-  var selectedAnswers = document.querySelectorAll('input[type=radio]:checked');
-  selectedAnswers.forEach(function (answer) {
-    var someSpan = document.createElement('span');
-    someSpan.className = 'your-choice';
-    someSpan.textContent = '(ваш ответ)';
-    answer.parentNode.appendChild(someSpan);
-  }); //CHECK IF ALL QUESTIONS ARE ANSWERED
+  var selectedAnswers = document.querySelectorAll('input[type=radio]:checked'); //CHECK IF ALL QUESTIONS ARE ANSWERED
 
   if (availableAnswers.length !== selectedAnswers.length) {
     (0, _index.alertOnOff)('<p class="info-box-text"> Пожалуйста, ответьте на все вопросы. </p>');
   } else {
-    (function () {
-      //CREATE RESULTBOX CONTAINER
-      var resultBox = document.createElement('div');
-      resultBox.className = 'result';
-      main.appendChild(resultBox); // LOOP THROUGH ALL OF THE QUESTION NAMES TO APPEND EXPLAIN BTN
+    // Vash resultat -CONTAINER BOX
+    selectedAnswers.forEach(function (answer) {
+      var someSpan = document.createElement('span');
+      someSpan.className = 'your-choice';
+      someSpan.textContent = '(ваш ответ)';
+      answer.parentNode.appendChild(someSpan);
+    }); //CREATE RESULTBOX CONTAINER
 
-      var allQuestions = document.querySelectorAll('.question-name-box');
-      allQuestions.forEach(function (exactQuestion, index) {
-        //CREATE EXPALAIN CONTAINTER AND BUTTON FOR CHECKING THE EXPALNATION
-        var explainBtn = document.createElement('button');
-        explainBtn.type = 'button';
-        explainBtn.className = "button-explain";
-        explainBtn.id = "".concat(index);
-        var infoImg = document.createElement('img');
-        infoImg.src = _.default['info-circle']; //CHILDREN NESTING CREATED ELEMENTS
+    var resultBox = document.createElement('div');
+    resultBox.className = 'result';
+    main.appendChild(resultBox); // LOOP THROUGH ALL OF THE QUESTION NAMES TO APPEND EXPLAIN BTN
 
-        explainBtn.appendChild(infoImg); //APPENDING CREATED EXPLANATION BTN INTO DOM
+    var allQuestions = document.querySelectorAll('.question-name-box');
+    allQuestions.forEach(function (exactQuestion, index) {
+      //CREATE EXPALAIN CONTAINTER AND BUTTON FOR CHECKING THE EXPALNATION
+      var explainBtn = document.createElement('button');
+      explainBtn.type = 'button';
+      explainBtn.className = "button-explain";
+      explainBtn.id = "".concat(index);
+      var infoImg = document.createElement('img');
+      infoImg.src = _.default['info-circle']; //CHILDREN NESTING CREATED ELEMENTS
 
-        exactQuestion.appendChild(explainBtn);
-      }); // SELECTING CREATED BUTTONS AND QUESTION BOXES
+      explainBtn.appendChild(infoImg); //APPENDING CREATED EXPLANATION BTN INTO DOM
 
-      var allExplainBtns = document.querySelectorAll('.button-explain');
-      var allExplainBtnsArray = Array.from(allExplainBtns);
-      var allQuestionBoxes = document.querySelectorAll('.question-box');
-      var allQuestionBoxesArray = Array.from(allQuestionBoxes); // LOOPING THROUGH ALL OF THE QUESTIONS
+      exactQuestion.appendChild(explainBtn);
+    }); // SELECTING CREATED BUTTONS AND QUESTION BOXES
 
-      var _loop = function _loop(i) {
-        var clickCount = true;
+    var allExplainBtns = document.querySelectorAll('.button-explain');
+    var allExplainBtnsArray = Array.from(allExplainBtns);
+    var allQuestionBoxes = document.querySelectorAll('.question-box');
+    var allQuestionBoxesArray = Array.from(allQuestionBoxes); // LOOPING THROUGH ALL OF THE QUESTIONS
 
-        function appendExplanation() {
-          if (clickCount) {
-            //SET CLICKCOUNT TO CONTROL ON/OFF DISPLAYING
-            clickCount = false; // explainCont.style.display === 'block';
+    allQuestionBoxesArray.forEach(function (questionBox, index) {
+      var clickCount = true;
+      var explainCont = document.createElement('div');
+      explainCont.className = 'explain-cont';
+      var explainP = document.createElement('p');
+      explainP.innerText = _hxks.default[index].explanation;
+      explainCont.appendChild(explainP);
+      questionBox.appendChild(explainCont);
+      explainCont.style.display = 'none';
 
-            var explainCont = document.createElement('div');
-            explainCont.className = 'explain-cont';
-            var explainP = document.createElement('p');
-            explainP.innerText = _hxks.default[i].explanation;
-            explainCont.appendChild(explainP);
-            allQuestionBoxesArray[i].appendChild(explainCont);
-            console.log(clickCount);
-          } else {
-            clickCount = true; //THE FOLLOWING ONE DOESN'T WORK CAUSE NO ELEMENT DELETING INSIDE DOM
-            // document.querySelector('.explain-cont').style.display = 'none';
-            //THIS DOES WORK CAUSE HERE WE DELETE ELEMENT IN THE DOM
+      function appendExplanation() {
+        if (clickCount) {
+          //SET CLICKCOUNT TO CONTROL ON/OFF DISPLAYING
+          clickCount = false;
+          explainCont.style.display = 'block';
+          console.log(clickCount);
+        } else if (!clickCount) {
+          clickCount = true;
+          explainCont.style.display = 'none';
+          console.log(clickCount);
+        } // console.log(clickCount);
 
-            allQuestionBoxes[i].removeChild(document.querySelector('.explain-cont'));
-            console.log(clickCount);
-          } // console.log(clickCount);
-
-        }
-
-        allExplainBtns[i].addEventListener('click', appendExplanation);
-      };
-
-      for (var i = 0; i < allExplainBtns.length; i++) {
-        _loop(i);
       }
 
-      selectedAnswers.forEach(function (answer, index) {
-        if (answer.value === _hxks.default[index].correct) {
-          countTrue += 1;
-          availableAnswers[index].style.border = '4px solid rgba(19, 111, 99, 0.3)';
-          answer.parentNode.style.backgroundColor = 'rgba(19, 111, 99, 0.3)';
-        } else if (answer.value !== _hxks.default[index].correct) {
-          countFalse += 1;
-          availableAnswers[index].style.border = '4px solid rgba(162, 44, 41, 0.3)';
-          answer.parentNode.style.backgroundColor = 'rgba(162, 44, 41, 0.3)';
-        }
-      }); //SHOW FINAL RESULT --- CORRECT AND INCORRECT ANSWERS INCLUDED
+      allExplainBtns[index].addEventListener('click', appendExplanation);
+    });
+    selectedAnswers.forEach(function (answer, index) {
+      if (answer.value === _hxks.default[index].correct) {
+        countTrue += 1;
+        availableAnswers[index].style.border = '4px solid rgba(19, 111, 99, 0.3)';
+        answer.parentNode.style.backgroundColor = 'rgba(19, 111, 99, 0.3)';
+      } else if (answer.value !== _hxks.default[index].correct) {
+        countFalse += 1;
+        availableAnswers[index].style.border = '4px solid rgba(162, 44, 41, 0.3)';
+        answer.parentNode.style.backgroundColor = 'rgba(162, 44, 41, 0.3)';
+      }
+    }); //SHOW FINAL RESULT --- CORRECT AND INCORRECT ANSWERS INCLUDED
 
-      var output = "\u0412\u0430\u0448 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 ".concat(countTrue, " \u0438\u0437 ").concat(availableAnswers.length, ".");
-      resultBox.innerHTML = output;
-      restartBtn.disabled = false;
-      checkBtn.disabled = true;
-    })();
+    var output = "\u0412\u0430\u0448 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 ".concat(countTrue, " \u0438\u0437 ").concat(availableAnswers.length, ".");
+    resultBox.innerHTML = output;
+    restartBtn.disabled = false;
+    checkBtn.disabled = true;
   }
 }); // RESTARTING THE QUIZ
 
@@ -486,7 +478,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56582" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56418" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

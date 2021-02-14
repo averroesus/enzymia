@@ -12,7 +12,6 @@ const body = document.querySelector('body');
 
 //DISABLE QUIZ RESTARTING BUTTON
 restartBtn.disabled = true;
-
 let outputQ = '';
 
 //CREATE QUIZBOX WITH ANSWERS INSIDE IT
@@ -63,6 +62,14 @@ checkBtn.addEventListener('click', function (e) {
   } else {
     //RESTRICT CHANGES ON INPUTRADIO ELEMENT
 
+    // vash resultat - box
+    selectedAnswers.forEach((answer) => {
+      const someSpan = document.createElement('span');
+      someSpan.className = 'your-choice';
+      someSpan.textContent = '(ваш ответ)';
+      answer.parentNode.appendChild(someSpan);
+    });
+
     //CREATE RESULTBOX CONTAINER
     const resultBox = document.createElement('div');
     resultBox.className = 'result';
@@ -93,42 +100,28 @@ checkBtn.addEventListener('click', function (e) {
     const allQuestionBoxesArray = Array.from(allQuestionBoxes);
 
     // LOOPING THROUGH ALL OF THE QUESTIONS
-    for (let i = 0; i < allExplainBtns.length; i++) {
+    allQuestionBoxesArray.forEach((questionBox, index) => {
       let clickCount = true;
+      const explainCont = document.createElement('div');
+      explainCont.className = 'explain-cont';
+      const explainP = document.createElement('p');
+      explainP.innerText = quizContent[index].explanation;
+      explainCont.appendChild(explainP);
+      questionBox.appendChild(explainCont);
+
+      explainCont.style.display = 'none';
+
       function appendExplanation() {
         if (clickCount) {
           //SET CLICKCOUNT TO CONTROL ON/OFF DISPLAYING
           clickCount = false;
-          // explainCont.style.display === 'block';
-          const explainCont = document.createElement('div');
-          explainCont.className = 'explain-cont';
-          const explainP = document.createElement('p');
-          explainP.innerText = quizContent[i].explanation;
-          explainCont.appendChild(explainP);
-          allQuestionBoxesArray[i].appendChild(explainCont);
-          console.log(clickCount);
-        } else {
+          explainCont.style.display = 'block';
+        } else if (!clickCount) {
           clickCount = true;
-          //THE FOLLOWING ONE DOESN'T WORK CAUSE NO ELEMENT DELETING INSIDE DOM
-          // document.querySelector('.explain-cont').style.display = 'none';
-
-          //THIS DOES WORK CAUSE HERE WE DELETE ELEMENT IN THE DOM
-          allQuestionBoxes[i].removeChild(
-            document.querySelector('.explain-cont')
-          );
-          console.log(clickCount);
+          explainCont.style.display = 'none';
         }
-        // console.log(clickCount);
       }
-
-      allExplainBtns[i].addEventListener('click', appendExplanation);
-    }
-
-    selectedAnswers.forEach((answer) => {
-      const someSpan = document.createElement('span');
-      someSpan.className = 'your-choice';
-      someSpan.textContent = '(ваш ответ)';
-      answer.parentNode.appendChild(someSpan);
+      allExplainBtns[index].addEventListener('click', appendExplanation);
     });
 
     selectedAnswers.forEach((answer, index) => {

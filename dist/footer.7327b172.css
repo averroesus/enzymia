@@ -16,6 +16,10 @@ footer {
   margin-bottom: 3cm;
 }
 
+footer .footer-btns {
+  margin-bottom: 6px;
+}
+
 /* ASIDE APPREC */
 
 aside.index {

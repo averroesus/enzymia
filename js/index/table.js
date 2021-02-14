@@ -29,7 +29,7 @@ enzymeBtn.addEventListener('click', functMy);
 const deckAnkiBtn = document.getElementById('anki-deck');
 
 let txtAnki = `
-          <p class='info-box-text'>Перед установкой колодки ENZANKI, рекомендуется ознакомится с <a href='https://alexeygorelov.github.io/anki-manual-ru/#/'>инструкцией</a> по пользованию программой АНКИ.</p>
+          <p class='info-box-text'>Перед установкой колоды ENZANKI, рекомендуется ознакомится с <a href='https://alexeygorelov.github.io/anki-manual-ru/#/'>инструкцией</a> по пользованию программой АНКИ.</p>
           <p class='info-box-text'>
           <br>
           <a href="__/enz.anki.apkg" donwload>Скачать колоду ENZANKI</a> </p> <br>

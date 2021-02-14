@@ -24,3 +24,10 @@ td {
     line-height: 1.3em;
   }
 }
+
+/* FOR IPHONE 5S */
+@media screen and (max-width: 340px) {
+  td {
+    font-size: x-small;
+  }
+}

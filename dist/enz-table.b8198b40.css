@@ -25,5 +25,12 @@ td {
   }
 }
 
+/* FOR IPHONE 5S */
+@media screen and (max-width: 340px) {
+  td {
+    font-size: x-small;
+  }
+}
+
 
 /*# sourceMappingURL=/enz-table.b8198b40.css.map */
